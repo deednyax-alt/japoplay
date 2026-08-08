@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - <%= item.title || item.name %></title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-left">
+      <a href="/home" class="brand-logo">JAPO<span>PLAY</span></a>
+      <ul class="nav-links">
+        <li><a href="/home">Accueil</a></li>
+        <li><a href="/movies">Films</a></li>
+        <li><a href="/series">Séries</a></li>
+        <li><a href="/anime">Animes</a></li>
+        <li><a href="/iptv">Live TV</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="/profiles" class="current-profile-btn">
+        <img id="currentAvatar" src="" alt="Profile">
+      </a>
+    </div>
+  </nav>
+
+  <div class="hero-banner" style="height: 70vh; background-image: url('https://image.tmdb.org/t/p/original<%= item.backdrop_path %>');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" style="max-width: 800px;">
+      <span class="hero-badge"><%= type === 'movie' ? 'FILM' : 'SÉRIE TV' %> • <%= item.release_date || item.first_air_date ? (item.release_date || item.first_air_date).substring(0,4) : '' %></span>
+      <h1 class="hero-title"><%= item.title || item.name %></h1>
+      <p class="hero-overview"><%= item.overview %></p>
+      
+      <% if (type === 'series' && item.seasons && item.seasons.length > 0) { %>
+        <div style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
+          <select id="seasonSelect" style="background: #121216; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 12px 16px; border-radius: 8px; font-size: 0.95rem; outline: none; width: 200px; cursor: pointer;" onchange="loadEpisodes(this.value)">
+            <% item.seasons.forEach(s => { %>
+              <% if (s.season_number > 0) { %>
+                <option value="<%= s.season_number %>" style="background: #121216; color: #ffffff; padding: 10px;">Saison <%= s.season_number %></option>
+              <% } %>
+            <% }) %>
+          </select>
+          <select id="episodeSelect" style="background: #121216; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 12px 16px; border-radius: 8px; font-size: 0.95rem; outline: none; min-width: 260px; cursor: pointer;">
+            <option value="1" style="background: #121216; color: #ffffff; padding: 10px;">Épisode 1</option>
+          </select>
+        </div>
+      <% } %>
+
+      <div class="hero-actions">
+        <button onclick="playMedia()" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Lancer le Lecteur
+        </button>
+        <a href="/home" class="btn-secondary">Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="catalog-section" style="margin-top: 40px;">
+    <% if (cast && cast.length > 0) { %>
+      <div class="section-header">
+        <h2 class="section-title">Acteurs Principaux</h2>
+      </div>
+      <div class="carousel-container" style="margin-bottom: 40px;">
+        <% cast.forEach(c => { %>
+          <div class="card-item" style="flex: 0 0 140px;">
+            <img src="<%= c.profile_path ? 'https://image.tmdb.org/t/p/w185' + c.profile_path : 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80' %>" class="card-poster" style="height: 180px;">
+            <div class="card-info">
+              <div class="card-title" style="font-size: 0.82rem;"><%= c.name %></div>
+              <div style="font-size: 0.72rem; color: var(--text-sub);"><%= c.character %></div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </main>
+
+  <script src="/js/app.js"></script>
+  <script>
+    const mediaType = '<%= type %>';
+    const mediaId = '<%= item.id %>';
+
+    async function loadEpisodes(seasonNum) {
+      const epSelect = document.getElementById('episodeSelect');
+      if (!epSelect) return;
+      epSelect.innerHTML = '<option style="background:#121216; color:#fff;">Chargement...</option>';
+
+      try {
+        const res = await fetch(`/api/series/${mediaId}/season/${seasonNum}`);
+        const data = await res.json();
+        if (data.episodes && data.episodes.length > 0) {
+          epSelect.innerHTML = data.episodes.map(e => `
+            <option value="${e.episode_number}" style="background:#121216; color:#fff; padding:8px;">Ép. ${e.episode_number} - ${e.name}</option>
+          `).join('');
+        } else {
+          epSelect.innerHTML = '<option value="1" style="background:#121216; color:#fff;">Épisode 1</option>';
+        }
+      } catch (e) {
+        epSelect.innerHTML = '<option value="1" style="background:#121216; color:#fff;">Épisode 1</option>';
+      }
+    }
+
+    function playMedia() {
+      if (mediaType === 'movie') {
+        window.location.href = `/watch?type=movie&id=${mediaId}`;
+      } else {
+        const sVal = document.getElementById('seasonSelect').value;
+        const eVal = document.getElementById('episodeSelect').value;
+        window.location.href = `/watch?type=series&id=${mediaId}&season=${sVal}&episode=${eVal}`;
+      }
+    }
+
+    if (mediaType === 'series') {
+      document.addEventListener('DOMContentLoaded', () => {
+        const sSel = document.getElementById('seasonSelect');
+        if (sSel) loadEpisodes(sSel.value);
+      });
+    }
+  </script>
+</body>
+</html>

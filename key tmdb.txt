@@ -1,0 +1,3 @@
+# ⚠️  Cette clé était exposée publiquement dans le code source GitHub.
+#     Génère-en une nouvelle sur : https://www.themoviedb.org/settings/api
+TMDB_API_KEY=bb2e5245598612d09a7065d3b6d2e59a

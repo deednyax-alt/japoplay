@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - Streaming Noir & Blanc</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="/home" class="brand-logo">JAPO<span>PLAY</span></a>
+      <ul class="nav-links">
+        <li><a href="/home" class="active">Accueil</a></li>
+        <li><a href="/movies">Films</a></li>
+        <li><a href="/series">Séries</a></li>
+        <li><a href="/anime">Animes</a></li>
+        <li><a href="/iptv">Live TV</a></li>
+        <li><a href="/history">Historique</a></li>
+        <li><a href="/my-list">Ma Liste</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <form action="/search" method="GET" class="search-box">
+        <svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" name="q" placeholder="Titres, genres, animes...">
+      </form>
+      <a href="/profiles" class="current-profile-btn">
+        <img id="currentAvatar" src="" alt="Profile">
+      </a>
+    </div>
+  </nav>
+
+  <% if (hero) { %>
+    <section class="hero-banner" style="background-image: url('https://image.tmdb.org/t/p/original<%= hero.backdrop_path %>');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">A l'Affiche • JapoPlay</span>
+        <h1 class="hero-title"><%= hero.title || hero.name %></h1>
+        <p class="hero-overview"><%= hero.overview %></p>
+        <div class="hero-actions">
+          <a href="/watch?type=movie&id=<%= hero.id %>" class="btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Visionner
+          </a>
+          <a href="/movie/<%= hero.id %>" class="btn-secondary">
+            Plus d'infos
+          </a>
+        </div>
+      </div>
+    </section>
+  <% } %>
+
+  <main style="position: relative; z-index: 20; padding-top: 10px;">
+    <section class="catalog-section" id="continueWatchingSection" style="display: none;">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          Reprendre la lecture
+        </h2>
+        <a href="/history" style="color: var(--text-sub); font-size: 0.85rem; text-decoration: none; font-weight: 600;">Tout voir →</a>
+      </div>
+      <div class="carousel-container" id="continueWatchingGrid"></div>
+    </section>
+
+    <section class="catalog-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Tendances Actuelles
+        </h2>
+      </div>
+      <div class="carousel-container">
+        <% trendingMovies.forEach(item => { %>
+          <% if (item.poster_path) { %>
+            <a href="/movie/<%= item.id %>" class="card-item">
+              <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" alt="<%= item.title %>" class="card-poster">
+              <div class="card-info">
+                <div class="card-title"><%= item.title %></div>
+                <div class="card-meta">
+                  <span><%= item.release_date ? item.release_date.substring(0,4) : 'FILM' %></span>
+                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
+                </div>
+              </div>
+            </a>
+          <% } %>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="catalog-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+          Séries Incontournables
+        </h2>
+      </div>
+      <div class="carousel-container">
+        <% popularSeries.forEach(item => { %>
+          <% if (item.poster_path) { %>
+            <a href="/series/<%= item.id %>" class="card-item">
+              <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" alt="<%= item.name %>" class="card-poster">
+              <div class="card-info">
+                <div class="card-title"><%= item.name %></div>
+                <div class="card-meta">
+                  <span>SÉRIE</span>
+                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.2' %></span>
+                </div>
+              </div>
+            </a>
+          <% } %>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="catalog-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Les Mieux Notés
+        </h2>
+      </div>
+      <div class="carousel-container">
+        <% topRated.forEach(item => { %>
+          <% if (item.poster_path) { %>
+            <a href="/movie/<%= item.id %>" class="card-item">
+              <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" alt="<%= item.title %>" class="card-poster">
+              <div class="card-info">
+                <div class="card-title"><%= item.title %></div>
+                <div class="card-meta">
+                  <span>TOP</span>
+                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.5' %></span>
+                </div>
+              </div>
+            </a>
+          <% } %>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: #09090b; border-top: 1px solid var(--border-light); padding: 50px 4% 30px 4%; margin-top: 60px; color: var(--text-sub); font-size: 0.88rem;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div>
+        <a href="/home" class="brand-logo" style="font-size: 1.5rem; margin-bottom: 12px; display: inline-flex;">JAPO<span>PLAY</span></a>
+        <p style="line-height: 1.6; margin-bottom: 16px;">La référence du streaming haute définition. Profitez de vos films, séries, animes et chaînes de télévision en direct sur tous vos écrans.</p>
+        <div style="font-size: 0.8rem; color: #a1a1aa;">&copy; 2026 JapoPlay Entertainment Inc. Tous droits réservés.</div>
+      </div>
+
+      <div>
+        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px;">Navigation</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="/home" style="color: var(--text-sub); text-decoration: none; transition: color 0.2s;">Accueil</a></li>
+          <li><a href="/movies" style="color: var(--text-sub); text-decoration: none; transition: color 0.2s;">Films HD</a></li>
+          <li><a href="/series" style="color: var(--text-sub); text-decoration: none; transition: color 0.2s;">Séries TV</a></li>
+          <li><a href="/anime" style="color: var(--text-sub); text-decoration: none; transition: color 0.2s;">Animes Vostfr</a></li>
+          <li><a href="/iptv" style="color: var(--text-sub); text-decoration: none; transition: color 0.2s;">Live TV Direct</a></li>
+          <li><a href="/history" style="color: var(--text-sub); text-decoration: none; transition: color 0.2s;">Historique de lecture</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px;">Certifications & Conformité</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-light); padding: 10px 14px; border-radius: 8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div>
+              <div style="color: #fff; font-weight: 700; font-size: 0.82rem;">Protection DRM JapoShield™ v4.2</div>
+              <div style="font-size: 0.72rem; color: #a1a1aa;">Cryptage de flux de bout en bout</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-light); padding: 10px 14px; border-radius: 8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <div>
+              <div style="color: #fff; font-weight: 700; font-size: 0.82rem;">Conformité RGPD & Données (UE)</div>
+              <div style="font-size: 0.72rem; color: #a1a1aa;">Vie privée & cookies sécurisés</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-light); padding: 10px 14px; border-radius: 8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <div>
+              <div style="color: #fff; font-weight: 700; font-size: 0.82rem;">Certificat Droit d'Auteur Off.</div>
+              <div style="font-size: 0.72rem; color: #a1a1aa;">Ref: JP-2026-COPYRIGHT-CERTIFIED • SACD/WIPO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-bottom-nav">
+    <a href="/home" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Accueil</span>
+    </a>
+    <a href="/movies" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+      <span>Films</span>
+    </a>
+    <a href="/series" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+      <span>Séries</span>
+    </a>
+    <a href="/iptv" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.83a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+      <span>Live TV</span>
+    </a>
+    <a href="/history" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Historique</span>
+    </a>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const history = getWatchHistory();
+      if (history && history.length > 0) {
+        const sec = document.getElementById('continueWatchingSection');
+        const grid = document.getElementById('continueWatchingGrid');
+        if (sec && grid) {
+          sec.style.display = 'block';
+          grid.innerHTML = history.slice(0, 10).map(item => {
+            let watchUrl = `/watch?type=${item.type}&id=${item.id}&season=${item.season || 1}&episode=${item.episode || 1}`;
+            let meta = item.type === 'movie' ? 'Film' : `S${item.season || 1} E${item.episode || 1}`;
+            return `
+              <a href="${watchUrl}" class="card-item" style="aspect-ratio: 16/9; width: 240px; flex-shrink: 0; background: #121216; border-radius: 8px; overflow: hidden; position: relative;">
+                ${item.poster ? `<img src="${item.poster}" class="card-poster" style="aspect-ratio: 16/9;">` : `<div style="padding: 12px; height: 100%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-align: center;">${item.title}</div>`}
+                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%);"></div>
+                <div class="card-info" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px;">
+                  <div class="card-title" style="font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</div>
+                  <div class="card-meta" style="font-size: 0.75rem;">
+                    <span>${meta}</span>
+                    ${item.progressPct > 0 ? `<span style="color:#fff;">${item.progressPct}%</span>` : ''}
+                  </div>
+                </div>
+                ${item.progressPct > 0 ? `
+                  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.2);">
+                    <div style="width: ${item.progressPct}%; height: 100%; background: #ffffff;"></div>
+                  </div>
+                ` : ''}
+              </a>
+            `;
+          }).join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

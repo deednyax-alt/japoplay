@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - Ma Liste</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-left">
+      <a href="/home" class="brand-logo">JAPO<span>PLAY</span></a>
+      <ul class="nav-links">
+        <li><a href="/home">Accueil</a></li>
+        <li><a href="/movies">Films</a></li>
+        <li><a href="/series">Séries</a></li>
+        <li><a href="/anime">Animes</a></li>
+        <li><a href="/iptv">Live TV</a></li>
+        <li><a href="/history">Historique</a></li>
+        <li><a href="/my-list" class="active">Ma Liste</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="/profiles" class="current-profile-btn">
+        <img id="currentAvatar" src="" alt="Profile">
+      </a>
+    </div>
+  </nav>
+
+  <main style="padding: 100px 4% 40px 4%;">
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">Ma Liste de Favoris</h1>
+    <div id="myListGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px;">
+      <div style="grid-column: 1/-1; text-align: center; color: var(--text-sub); padding: 40px;">
+        Votre liste de favoris est vide pour le moment. Parcourez le catalogue et ajoutez des titres !
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

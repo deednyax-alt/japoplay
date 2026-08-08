@@ -1,0 +1,2406 @@
+{
+  "timestamp": 1785979999802,
+  "count": 240,
+  "channels": [
+    {
+      "id": "france-2-hd-b",
+      "name": "FRANCE 2 HD",
+      "slug": "france-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/960px-France_2_2018.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Ffrance-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/france-2-hd-b"
+    },
+    {
+      "id": "20-minutes-tv-c",
+      "name": "20 MINUTES TV",
+      "slug": "20-minutes-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/20_Minutes_TV_IDF_logo_%282023%29.png/960px-20_Minutes_TV_IDF_logo_%282023%29.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2F20-minutes-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/20-minutes-tv-c"
+    },
+    {
+      "id": "6ter-fhd-b",
+      "name": "6TER FHD",
+      "slug": "6ter-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2nd5Cox.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2F6ter-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/6ter-fhd-b"
+    },
+    {
+      "id": "a-la-carte-1-hd-b",
+      "name": "A LA CARTE 1 HD",
+      "slug": "a-la-carte-1-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-1-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-1-hd-b"
+    },
+    {
+      "id": "a-la-carte-10-hd-b",
+      "name": "A LA CARTE 10 HD",
+      "slug": "a-la-carte-10-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-10-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-10-hd-b"
+    },
+    {
+      "id": "a-la-carte-11-b",
+      "name": "A LA CARTE 11",
+      "slug": "a-la-carte-11-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-11-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-11-b"
+    },
+    {
+      "id": "a-la-carte-2-hd-b",
+      "name": "A LA CARTE 2 HD",
+      "slug": "a-la-carte-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-2-hd-b"
+    },
+    {
+      "id": "a-la-carte-3-hd-b",
+      "name": "A LA CARTE 3 HD",
+      "slug": "a-la-carte-3-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-3-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-3-hd-b"
+    },
+    {
+      "id": "a-la-carte-4-hd-b",
+      "name": "A LA CARTE 4 HD",
+      "slug": "a-la-carte-4-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-4-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-4-hd-b"
+    },
+    {
+      "id": "a-la-carte-5-hd-b",
+      "name": "A LA CARTE 5 HD",
+      "slug": "a-la-carte-5-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-5-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-5-hd-b"
+    },
+    {
+      "id": "a-la-carte-6-hd-b",
+      "name": "A LA CARTE 6 HD",
+      "slug": "a-la-carte-6-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-6-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-6-hd-b"
+    },
+    {
+      "id": "a-la-carte-7-hd-b",
+      "name": "A LA CARTE 7 HD",
+      "slug": "a-la-carte-7-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-7-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-7-hd-b"
+    },
+    {
+      "id": "a-la-carte-8-hd-b",
+      "name": "A LA CARTE 8 HD",
+      "slug": "a-la-carte-8-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-8-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-8-hd-b"
+    },
+    {
+      "id": "a-la-carte-9-hd-b",
+      "name": "A LA CARTE 9 HD",
+      "slug": "a-la-carte-9-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-la-carte-9-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-la-carte-9-hd-b"
+    },
+    {
+      "id": "a-c",
+      "name": "A+",
+      "slug": "a-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/uu0UJme.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-c"
+    },
+    {
+      "id": "a-ivoire-s",
+      "name": "A+ IVOIRE",
+      "slug": "a-ivoire-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/yOW0vyP.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa-ivoire-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a-ivoire-s"
+    },
+    {
+      "id": "a12-tv-c",
+      "name": "A12 TV",
+      "slug": "a12-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/JgnjgvF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fa12-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/a12-tv-c"
+    },
+    {
+      "id": "ab-1-hd-s",
+      "name": "AB 1 HD",
+      "slug": "ab-1-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/9C7UsOe.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fab-1-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/ab-1-hd-s"
+    },
+    {
+      "id": "ab-3-hd-s",
+      "name": "AB 3 HD",
+      "slug": "ab-3-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/AB3_2025.svg/960px-AB3_2025.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fab-3-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/ab-3-hd-s"
+    },
+    {
+      "id": "ab1-b",
+      "name": "AB1",
+      "slug": "ab1-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/9C7UsOe.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fab1-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/ab1-b"
+    },
+    {
+      "id": "ab3-hd-s",
+      "name": "AB3 HD",
+      "slug": "ab3-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/AB3_2025.svg/960px-AB3_2025.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fab3-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/ab3-hd-s"
+    },
+    {
+      "id": "action-b",
+      "name": "ACTION",
+      "slug": "action-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/zOXN7hX.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Faction-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/action-b"
+    },
+    {
+      "id": "adn-tv-c",
+      "name": "ADN TV+",
+      "slug": "adn-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/HQZQyWt.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fadn-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/adn-tv-c"
+    },
+    {
+      "id": "africa-24-c",
+      "name": "AFRICA 24",
+      "slug": "africa-24-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YWIJdai.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fafrica-24-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/africa-24-c"
+    },
+    {
+      "id": "altice-studio-hd-s",
+      "name": "ALTICE STUDIO HD",
+      "slug": "altice-studio-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/3R7ZNvm.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Faltice-studio-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/altice-studio-hd-s"
+    },
+    {
+      "id": "angers-tele-c",
+      "name": "ANGERS TELE",
+      "slug": "angers-tele-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/CMKKbaP.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fangers-tele-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/angers-tele-c"
+    },
+    {
+      "id": "animaux-b",
+      "name": "ANIMAUX",
+      "slug": "animaux-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/FM9FVAG.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fanimaux-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/animaux-b"
+    },
+    {
+      "id": "arte-fhd-s",
+      "name": "ARTE FHD",
+      "slug": "arte-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ecXMjNl.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Farte-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/arte-fhd-s"
+    },
+    {
+      "id": "auto-moto-hd-s",
+      "name": "AUTO MOTO HD",
+      "slug": "auto-moto-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/SZtJfOG.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fauto-moto-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/auto-moto-hd-s"
+    },
+    {
+      "id": "automoto-la-chaine-fhd-s",
+      "name": "AUTOMOTO LA CHAINE FHD",
+      "slug": "automoto-la-chaine-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ebf2uc7.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fautomoto-la-chaine-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/automoto-la-chaine-fhd-s"
+    },
+    {
+      "id": "baby-tv-fhd-s",
+      "name": "BABY TV FHD",
+      "slug": "baby-tv-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/SbBKr8L.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbaby-tv-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/baby-tv-fhd-s"
+    },
+    {
+      "id": "bbc-drama-c",
+      "name": "BBC DRAMA",
+      "slug": "bbc-drama-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/HctHhLL.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbbc-drama-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bbc-drama-c"
+    },
+    {
+      "id": "bbc-top-gear-france-c",
+      "name": "BBC TOP GEAR FRANCE",
+      "slug": "bbc-top-gear-france-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/960px-France_2_2018.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbbc-top-gear-france-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bbc-top-gear-france-c"
+    },
+    {
+      "id": "be-eleven-pro-league-3-hd-b",
+      "name": "BE: ELEVEN PRO LEAGUE 3 HD",
+      "slug": "be-eleven-pro-league-3-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/4H7cI2X.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbe-eleven-pro-league-3-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/be-eleven-pro-league-3-hd-b"
+    },
+    {
+      "id": "be-eleven-pro-leagues-1-hd-b",
+      "name": "BE: ELEVEN PRO LEAGUES 1 HD",
+      "slug": "be-eleven-pro-leagues-1-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/bGRgFwo.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbe-eleven-pro-leagues-1-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/be-eleven-pro-leagues-1-hd-b"
+    },
+    {
+      "id": "be-eleven-pro-leagues-2-hd-b",
+      "name": "BE: ELEVEN PRO LEAGUES 2 HD",
+      "slug": "be-eleven-pro-leagues-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/bGRgFwo.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbe-eleven-pro-leagues-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/be-eleven-pro-leagues-2-hd-b"
+    },
+    {
+      "id": "be-elevensport-1-hd-b",
+      "name": "BE: ELEVENSPORT 1 HD",
+      "slug": "be-elevensport-1-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/AOu4FXH.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbe-elevensport-1-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/be-elevensport-1-hd-b"
+    },
+    {
+      "id": "be-elevensport-2-hd-b",
+      "name": "BE: ELEVENSPORT 2 HD",
+      "slug": "be-elevensport-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/AOu4FXH.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbe-elevensport-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/be-elevensport-2-hd-b"
+    },
+    {
+      "id": "be-elevensport-3-hd-b",
+      "name": "BE: ELEVENSPORT 3 HD",
+      "slug": "be-elevensport-3-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/AOu4FXH.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbe-elevensport-3-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/be-elevensport-3-hd-b"
+    },
+    {
+      "id": "bein-sports-1-fhd-b",
+      "name": "BEIN SPORTS 1 FHD",
+      "slug": "bein-sports-1-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Vtk2cGI.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-1-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-1-fhd-b"
+    },
+    {
+      "id": "bein-sports-1-fhd-live-during-events-only-s",
+      "name": "BEIN SPORTS 1 FHD [LIVE DURING EVENTS ONLY]",
+      "slug": "bein-sports-1-fhd-live-during-events-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/tGTVcVe.jpg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-1-fhd-live-during-events-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-1-fhd-live-during-events-only-s"
+    },
+    {
+      "id": "bein-sports-2-fhd-b",
+      "name": "BEIN SPORTS 2 FHD",
+      "slug": "bein-sports-2-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/vUJZSvs.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-2-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-2-fhd-b"
+    },
+    {
+      "id": "bein-sports-3-fhd-b",
+      "name": "BEIN SPORTS 3 FHD",
+      "slug": "bein-sports-3-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/UYSMao3.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-3-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-3-fhd-b"
+    },
+    {
+      "id": "bein-sports-max-10-fhd-event-only-s",
+      "name": "BEIN SPORTS MAX 10 FHD (EVENT ONLY)",
+      "slug": "bein-sports-max-10-fhd-event-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/lVB4Ao9.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-10-fhd-event-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-10-fhd-event-only-s"
+    },
+    {
+      "id": "bein-sports-max-4-fhd-event-only-s",
+      "name": "BEIN SPORTS MAX 4 FHD (EVENT ONLY)",
+      "slug": "bein-sports-max-4-fhd-event-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/j7osMfM.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-4-fhd-event-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-4-fhd-event-only-s"
+    },
+    {
+      "id": "bein-sports-max-5-fhd-event-only-s",
+      "name": "BEIN SPORTS MAX 5 FHD (EVENT ONLY)",
+      "slug": "bein-sports-max-5-fhd-event-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/L6TvXAi.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-5-fhd-event-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-5-fhd-event-only-s"
+    },
+    {
+      "id": "bein-sports-max-6-fhd-event-only-s",
+      "name": "BEIN SPORTS MAX 6 FHD (EVENT ONLY)",
+      "slug": "bein-sports-max-6-fhd-event-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/GHZHRPF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-6-fhd-event-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-6-fhd-event-only-s"
+    },
+    {
+      "id": "bein-sports-max-7-fhd-event-only-s",
+      "name": "BEIN SPORTS MAX 7 FHD (EVENT ONLY)",
+      "slug": "bein-sports-max-7-fhd-event-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/sMH0tFc.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-7-fhd-event-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-7-fhd-event-only-s"
+    },
+    {
+      "id": "bein-sports-max-8-fhd-event-only-s",
+      "name": "BEIN SPORTS MAX 8 FHD (EVENT ONLY)",
+      "slug": "bein-sports-max-8-fhd-event-only-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/VTzzoQP.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-8-fhd-event-only-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-8-fhd-event-only-s"
+    },
+    {
+      "id": "bein-sports-max-9-hd-b",
+      "name": "BEIN SPORTS MAX 9 HD",
+      "slug": "bein-sports-max-9-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/dMTBut1.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbein-sports-max-9-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bein-sports-max-9-hd-b"
+    },
+    {
+      "id": "berbere-television-s",
+      "name": "BERBERE TELEVISION",
+      "slug": "berbere-television-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Uc2PAmL.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fberbere-television-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/berbere-television-s"
+    },
+    {
+      "id": "berbere-tv-c",
+      "name": "BERBERE TV",
+      "slug": "berbere-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Uc2PAmL.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fberbere-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/berbere-tv-c"
+    },
+    {
+      "id": "berbere-tv-music-c",
+      "name": "BERBERE TV MUSIC",
+      "slug": "berbere-tv-music-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/JWVo0uB.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fberbere-tv-music-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/berbere-tv-music-c"
+    },
+    {
+      "id": "bet-fhd-s",
+      "name": "BET FHD",
+      "slug": "bet-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/copIbc9.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbet-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bet-fhd-s"
+    },
+    {
+      "id": "beyblade-c",
+      "name": "BEYBLADE",
+      "slug": "beyblade-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/yaHE8Uj.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbeyblade-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/beyblade-c"
+    },
+    {
+      "id": "bfm-2-c",
+      "name": "BFM 2",
+      "slug": "bfm-2-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YJCcczD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbfm-2-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bfm-2-c"
+    },
+    {
+      "id": "bfm-business-fhd-s",
+      "name": "BFM BUSINESS FHD",
+      "slug": "bfm-business-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YJCcczD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbfm-business-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bfm-business-fhd-s"
+    },
+    {
+      "id": "bfm-tv-hd-b",
+      "name": "BFM TV HD",
+      "slug": "bfm-tv-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YJCcczD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbfm-tv-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bfm-tv-hd-b"
+    },
+    {
+      "id": "bfm-lille-tv-c",
+      "name": "BFM LILLE TV",
+      "slug": "bfm-lille-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YJCcczD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbfm-lille-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bfm-lille-tv-c"
+    },
+    {
+      "id": "bfm-lyon-c",
+      "name": "BFM LYON",
+      "slug": "bfm-lyon-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YJCcczD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbfm-lyon-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bfm-lyon-c"
+    },
+    {
+      "id": "bfm-paris-fhd-s",
+      "name": "BFM PARIS FHD",
+      "slug": "bfm-paris-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YJCcczD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbfm-paris-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bfm-paris-fhd-s"
+    },
+    {
+      "id": "bip-tv-c",
+      "name": "BIP TV",
+      "slug": "bip-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/YQjm4U5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbip-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bip-tv-c"
+    },
+    {
+      "id": "bob-leponge-c",
+      "name": "BOB LEPONGE",
+      "slug": "bob-leponge-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://images.pluto.tv/channels/66588931a3865300085ca800/colorLogoPNG.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbob-leponge-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/bob-leponge-c"
+    },
+    {
+      "id": "boing-fhd-s",
+      "name": "BOING FHD",
+      "slug": "boing-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/rabKj9i.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fboing-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/boing-fhd-s"
+    },
+    {
+      "id": "boomerang-fhd-s",
+      "name": "BOOMERANG FHD",
+      "slug": "boomerang-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/960px-Cartoonito_-_Logo_2021.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fboomerang-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/boomerang-fhd-s"
+    },
+    {
+      "id": "box-office-1-c",
+      "name": "BOX OFFICE 1",
+      "slug": "box-office-1-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-1-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-1-c"
+    },
+    {
+      "id": "box-office-2-c",
+      "name": "BOX OFFICE 2",
+      "slug": "box-office-2-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-2-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-2-c"
+    },
+    {
+      "id": "box-office-3-c",
+      "name": "BOX OFFICE 3",
+      "slug": "box-office-3-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-3-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-3-c"
+    },
+    {
+      "id": "box-office-4-c",
+      "name": "BOX OFFICE 4",
+      "slug": "box-office-4-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-4-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-4-c"
+    },
+    {
+      "id": "box-office-5-c",
+      "name": "BOX OFFICE 5",
+      "slug": "box-office-5-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-5-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-5-c"
+    },
+    {
+      "id": "box-office-6-c",
+      "name": "BOX OFFICE 6",
+      "slug": "box-office-6-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-6-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-6-c"
+    },
+    {
+      "id": "box-office-7-c",
+      "name": "BOX OFFICE 7",
+      "slug": "box-office-7-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-7-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-7-c"
+    },
+    {
+      "id": "box-office-8-c",
+      "name": "BOX OFFICE 8",
+      "slug": "box-office-8-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-8-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-8-c"
+    },
+    {
+      "id": "box-office-9-c",
+      "name": "BOX OFFICE 9",
+      "slug": "box-office-9-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbox-office-9-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/box-office-9-c"
+    },
+    {
+      "id": "boxoffice-10-c",
+      "name": "BOXOFFICE 10",
+      "slug": "boxoffice-10-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fboxoffice-10-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/boxoffice-10-c"
+    },
+    {
+      "id": "brava-fr-hd-s",
+      "name": "BRAVA FR HD",
+      "slug": "brava-fr-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/UT4a5Sc.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fbrava-fr-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/brava-fr-hd-s"
+    },
+    {
+      "id": "c-news-fhd-s",
+      "name": "C NEWS FHD",
+      "slug": "c-news-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/ABC_News_Live_logo_2021.svg/960px-ABC_News_Live_logo_2021.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fc-news-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/c-news-fhd-s"
+    },
+    {
+      "id": "c-star-fhd-s",
+      "name": "C STAR FHD",
+      "slug": "c-star-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/w4kAX1V.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fc-star-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/c-star-fhd-s"
+    },
+    {
+      "id": "c8-hd-b",
+      "name": "C8 HD",
+      "slug": "c8-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/sJw1HtY.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fc8-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/c8-hd-b"
+    },
+    {
+      "id": "ca-canal-d-b",
+      "name": "CA: CANAL D",
+      "slug": "ca-canal-d-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/55/CanalD.svg/960px-CanalD.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fca-canal-d-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/ca-canal-d-b"
+    },
+    {
+      "id": "ca-prise-b",
+      "name": "CA: PRISE",
+      "slug": "ca-prise-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/5wnuHIg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fca-prise-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/ca-prise-b"
+    },
+    {
+      "id": "canal-fhd-b",
+      "name": "CANAL+ FHD",
+      "slug": "canal-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-fhd-b"
+    },
+    {
+      "id": "canal-ligue-1-s",
+      "name": "CANAL + LIGUE 1",
+      "slug": "canal-ligue-1-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/39eRI0c.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-ligue-1-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-ligue-1-s"
+    },
+    {
+      "id": "canal-alpha-s",
+      "name": "CANAL ALPHA",
+      "slug": "canal-alpha-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ZMrKhRf.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-alpha-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-alpha-s"
+    },
+    {
+      "id": "canal-alpha-jura-c",
+      "name": "CANAL ALPHA JURA",
+      "slug": "canal-alpha-jura-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/eQ8xHK9.jpg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-alpha-jura-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-alpha-jura-c"
+    },
+    {
+      "id": "canal-cinema-fhd-s",
+      "name": "CANAL+ CINEMA FHD",
+      "slug": "canal-cinema-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/fvPoNEa.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-cinema-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-cinema-fhd-s"
+    },
+    {
+      "id": "canal-d-c",
+      "name": "CANAL D",
+      "slug": "canal-d-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/55/CanalD.svg/960px-CanalD.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-d-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-d-c"
+    },
+    {
+      "id": "canal-decale-fhd-s",
+      "name": "CANAL+ DECALE FHD",
+      "slug": "canal-decale-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/nNyNFEG.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-decale-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-decale-fhd-s"
+    },
+    {
+      "id": "canal-emotion-hd-s",
+      "name": "CANAL EMOTION HD",
+      "slug": "canal-emotion-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-emotion-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-emotion-hd-s"
+    },
+    {
+      "id": "canal-family-hd-b",
+      "name": "CANAL FAMILY HD",
+      "slug": "canal-family-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/IqwbPWV.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-family-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-family-hd-b"
+    },
+    {
+      "id": "canal-j-fhd-s",
+      "name": "CANAL J FHD",
+      "slug": "canal-j-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2m5wPGU.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-j-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-j-fhd-s"
+    },
+    {
+      "id": "canal-junior-hd-s",
+      "name": "CANAL JUNIOR HD",
+      "slug": "canal-junior-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/eP6oOJO.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-junior-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-junior-hd-s"
+    },
+    {
+      "id": "canal-play-c",
+      "name": "CANAL PLAY",
+      "slug": "canal-play-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-c"
+    },
+    {
+      "id": "canal-play-1-fhd-s",
+      "name": "CANAL PLAY 1 FHD",
+      "slug": "canal-play-1-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-1-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-1-fhd-s"
+    },
+    {
+      "id": "canal-play-10-fhd-s",
+      "name": "CANAL PLAY 10 FHD",
+      "slug": "canal-play-10-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-10-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-10-fhd-s"
+    },
+    {
+      "id": "canal-play-11-s",
+      "name": "CANAL PLAY 11",
+      "slug": "canal-play-11-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-11-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-11-s"
+    },
+    {
+      "id": "canal-play-12-s",
+      "name": "CANAL PLAY 12",
+      "slug": "canal-play-12-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-12-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-12-s"
+    },
+    {
+      "id": "canal-play-13-s",
+      "name": "CANAL PLAY 13",
+      "slug": "canal-play-13-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-13-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-13-s"
+    },
+    {
+      "id": "canal-play-14-s",
+      "name": "CANAL PLAY 14",
+      "slug": "canal-play-14-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-14-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-14-s"
+    },
+    {
+      "id": "canal-play-17-s",
+      "name": "CANAL PLAY 17",
+      "slug": "canal-play-17-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-17-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-17-s"
+    },
+    {
+      "id": "canal-play-18-s",
+      "name": "CANAL PLAY 18",
+      "slug": "canal-play-18-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-18-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-18-s"
+    },
+    {
+      "id": "canal-play-2-fhd-s",
+      "name": "CANAL PLAY 2 FHD",
+      "slug": "canal-play-2-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-2-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-2-fhd-s"
+    },
+    {
+      "id": "canal-play-3-fhd-s",
+      "name": "CANAL PLAY 3 FHD",
+      "slug": "canal-play-3-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-3-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-3-fhd-s"
+    },
+    {
+      "id": "canal-play-4-fhd-s",
+      "name": "CANAL PLAY 4 FHD",
+      "slug": "canal-play-4-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-4-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-4-fhd-s"
+    },
+    {
+      "id": "canal-play-5-fhd-s",
+      "name": "CANAL PLAY 5 FHD",
+      "slug": "canal-play-5-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-5-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-5-fhd-s"
+    },
+    {
+      "id": "canal-play-6-fhd-s",
+      "name": "CANAL PLAY 6 FHD",
+      "slug": "canal-play-6-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-6-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-6-fhd-s"
+    },
+    {
+      "id": "canal-play-7-c",
+      "name": "CANAL PLAY 7",
+      "slug": "canal-play-7-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-7-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-7-c"
+    },
+    {
+      "id": "canal-play-8-fhd-s",
+      "name": "CANAL PLAY 8 FHD",
+      "slug": "canal-play-8-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-8-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-8-fhd-s"
+    },
+    {
+      "id": "canal-play-9-c",
+      "name": "CANAL PLAY 9",
+      "slug": "canal-play-9-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-play-9-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-play-9-c"
+    },
+    {
+      "id": "canal-plus-c-nema-b",
+      "name": "CANAL PLUS C NEMA",
+      "slug": "canal-plus-c-nema-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-plus-c-nema-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-plus-c-nema-b"
+    },
+    {
+      "id": "canal-savoir-c",
+      "name": "CANAL SAVOIR",
+      "slug": "canal-savoir-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-savoir-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-savoir-c"
+    },
+    {
+      "id": "canal-series-fhd-s",
+      "name": "CANAL+ SERIES FHD",
+      "slug": "canal-series-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Series_2_por_Movistar_Plus%2B_2022_logo.svg/960px-Series_2_por_Movistar_Plus%2B_2022_logo.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-series-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-series-fhd-s"
+    },
+    {
+      "id": "canal-sport-fhd-b",
+      "name": "CANAL+ SPORT FHD",
+      "slug": "canal-sport-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/39eRI0c.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-fhd-b"
+    },
+    {
+      "id": "canal-360-fhd-b",
+      "name": "CANAL+ 360 FHD",
+      "slug": "canal-360-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Canal360_1920x1080.png/960px-Canal360_1920x1080.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-360-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-360-fhd-b"
+    },
+    {
+      "id": "canal-action-hd-b",
+      "name": "CANAL+ ACTION HD",
+      "slug": "canal-action-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/4CYBGRi.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-action-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-action-hd-b"
+    },
+    {
+      "id": "canal-box-office-hd-b",
+      "name": "CANAL+ BOX OFFICE HD",
+      "slug": "canal-box-office-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/RPZFpcH.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-box-office-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-box-office-hd-b"
+    },
+    {
+      "id": "canal-cinema-centre-hd-b",
+      "name": "CANAL+ CINEMA CENTRE HD",
+      "slug": "canal-cinema-centre-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/esdtovD.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-cinema-centre-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-cinema-centre-hd-b"
+    },
+    {
+      "id": "canal-cinema-ouest-hd-b",
+      "name": "CANAL+ CINEMA OUEST HD",
+      "slug": "canal-cinema-ouest-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/TJPGm5Y.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-cinema-ouest-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-cinema-ouest-hd-b"
+    },
+    {
+      "id": "canal-cinemas-fhd-b",
+      "name": "CANAL+ CINEMAS FHD",
+      "slug": "canal-cinemas-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/fvPoNEa.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-cinemas-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-cinemas-fhd-b"
+    },
+    {
+      "id": "canal-cinemas-sd-b",
+      "name": "CANAL+ CINEMAS SD",
+      "slug": "canal-cinemas-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/fvPoNEa.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-cinemas-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-cinemas-sd-b"
+    },
+    {
+      "id": "canal-docs-hd-s",
+      "name": "CANAL+ DOCS HD",
+      "slug": "canal-docs-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/WFXhE8f.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-docs-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-docs-hd-s"
+    },
+    {
+      "id": "canal-elles-hd-b",
+      "name": "CANAL+ ELLES HD",
+      "slug": "canal-elles-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/d90LTl7.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-elles-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-elles-hd-b"
+    },
+    {
+      "id": "canal-foot-fhd-s",
+      "name": "CANAL+ FOOT FHD",
+      "slug": "canal-foot-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Canal%2BFoot.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-foot-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-foot-fhd-s"
+    },
+    {
+      "id": "canal-grand-ecran-fhd-b",
+      "name": "CANAL+ GRAND ECRAN FHD",
+      "slug": "canal-grand-ecran-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i0.wp.com/www.planetecsat.com/wp-content/uploads/2022/01/CANALP_GRAND_ECRAN_1lignes_RVB_2021_06_07-07-01-22.png?w=509&ssl=1",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-grand-ecran-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-grand-ecran-fhd-b"
+    },
+    {
+      "id": "canal-kids-fhd-b",
+      "name": "CANAL+ KIDS FHD",
+      "slug": "canal-kids-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/xknv5py.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-kids-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-kids-fhd-b"
+    },
+    {
+      "id": "canal-live-1-hd-b",
+      "name": "CANAL+ LIVE 1 HD",
+      "slug": "canal-live-1-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://ocdn.eu/ptv2-images-transforms/1/RPqkrlsb2dvLW1pZ3JhdGVkL2NhbmFsLTEucG5nkpUCZADCw5UCACjCww",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-1-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-1-hd-b"
+    },
+    {
+      "id": "canal-live-10-c",
+      "name": "CANAL+ LIVE 10",
+      "slug": "canal-live-10-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-10-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-10-c"
+    },
+    {
+      "id": "canal-live-11-c",
+      "name": "CANAL+ LIVE 11",
+      "slug": "canal-live-11-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-11-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-11-c"
+    },
+    {
+      "id": "canal-live-12-c",
+      "name": "CANAL+ LIVE 12",
+      "slug": "canal-live-12-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-12-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-12-c"
+    },
+    {
+      "id": "canal-live-2-hd-b",
+      "name": "CANAL+ LIVE 2 HD",
+      "slug": "canal-live-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/y0h8dlX.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-2-hd-b"
+    },
+    {
+      "id": "canal-live-3-hd-b",
+      "name": "CANAL+ LIVE 3 HD",
+      "slug": "canal-live-3-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Canal360_1920x1080.png/960px-Canal360_1920x1080.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-3-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-3-hd-b"
+    },
+    {
+      "id": "canal-live-4-hd-b",
+      "name": "CANAL+ LIVE 4 HD",
+      "slug": "canal-live-4-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-4-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-4-hd-b"
+    },
+    {
+      "id": "canal-live-5-hd-b",
+      "name": "CANAL+ LIVE 5 HD",
+      "slug": "canal-live-5-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-5-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-5-hd-b"
+    },
+    {
+      "id": "canal-live-6-hd-b",
+      "name": "CANAL+ LIVE 6 HD",
+      "slug": "canal-live-6-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-6-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-6-hd-b"
+    },
+    {
+      "id": "canal-live-7-hd-b",
+      "name": "CANAL+ LIVE 7 HD",
+      "slug": "canal-live-7-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-7-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-7-hd-b"
+    },
+    {
+      "id": "canal-live-8-c",
+      "name": "CANAL+ LIVE 8",
+      "slug": "canal-live-8-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-live-8-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-live-8-c"
+    },
+    {
+      "id": "canal-moto-gp-s",
+      "name": "CANAL+ MOTO GP",
+      "slug": "canal-moto-gp-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-moto-gp-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-moto-gp-s"
+    },
+    {
+      "id": "canal-motogp-hd-s",
+      "name": "CANAL+ MOTOGP HD",
+      "slug": "canal-motogp-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/CnJE2M0.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-motogp-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-motogp-hd-s"
+    },
+    {
+      "id": "canal-pl-s",
+      "name": "CANAL+ PL",
+      "slug": "canal-pl-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jLLAjaw.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-pl-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-pl-s"
+    },
+    {
+      "id": "canal-premier-league-hd-b",
+      "name": "CANAL+ PREMIER LEAGUE HD",
+      "slug": "canal-premier-league-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/aKFlhRO.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-premier-league-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-premier-league-hd-b"
+    },
+    {
+      "id": "canal-premiere-hd-b",
+      "name": "CANAL+ PREMIERE HD",
+      "slug": "canal-premiere-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/jjIwyjp.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-premiere-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-premiere-hd-b"
+    },
+    {
+      "id": "canal-sd-b",
+      "name": "CANAL+ SD",
+      "slug": "canal-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sd-b"
+    },
+    {
+      "id": "canal-sport-1-hd-b",
+      "name": "CANAL+ SPORT 1 HD",
+      "slug": "canal-sport-1-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/nuVSNEy.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-1-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-1-hd-b"
+    },
+    {
+      "id": "canal-sport-2-hd-b",
+      "name": "CANAL+ SPORT 2 HD",
+      "slug": "canal-sport-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/3QirJD7.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-2-hd-b"
+    },
+    {
+      "id": "canal-sport-3-hd-b",
+      "name": "CANAL+ SPORT 3 HD",
+      "slug": "canal-sport-3-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Jl6SLNf.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-3-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-3-hd-b"
+    },
+    {
+      "id": "canal-sport-360-c",
+      "name": "CANAL+ SPORT 360",
+      "slug": "canal-sport-360-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/64/Canal%2BSport_360.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-360-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-360-c"
+    },
+    {
+      "id": "canal-sport-4-hd-b",
+      "name": "CANAL+ SPORT 4 HD",
+      "slug": "canal-sport-4-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BNAPYAx.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-4-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-4-hd-b"
+    },
+    {
+      "id": "canal-sport-5-hd-b",
+      "name": "CANAL+ SPORT 5 HD",
+      "slug": "canal-sport-5-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/CANAL%2B_Sport_5.png/960px-CANAL%2B_Sport_5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-5-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-5-hd-b"
+    },
+    {
+      "id": "canal-sport-sd-b",
+      "name": "CANAL+ SPORT SD",
+      "slug": "canal-sport-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/39eRI0c.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-sport-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-sport-sd-b"
+    },
+    {
+      "id": "canal-top-14-hd-b",
+      "name": "CANAL+ TOP 14 HD",
+      "slug": "canal-top-14-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/d1iTOMt.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanal-top-14-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canal-top-14-hd-b"
+    },
+    {
+      "id": "canalplay-11-c",
+      "name": "CANALPLAY 11",
+      "slug": "canalplay-11-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanalplay-11-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canalplay-11-c"
+    },
+    {
+      "id": "canalplay-12-c",
+      "name": "CANALPLAY 12",
+      "slug": "canalplay-12-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanalplay-12-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canalplay-12-c"
+    },
+    {
+      "id": "canalplay-13-c",
+      "name": "CANALPLAY 13",
+      "slug": "canalplay-13-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanalplay-13-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canalplay-13-c"
+    },
+    {
+      "id": "canalplay-15-c",
+      "name": "CANALPLAY 15",
+      "slug": "canalplay-15-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanalplay-15-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canalplay-15-c"
+    },
+    {
+      "id": "canalplay-18-c",
+      "name": "CANALPLAY 18",
+      "slug": "canalplay-18-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanalplay-18-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canalplay-18-c"
+    },
+    {
+      "id": "canalplay-vod-1-hd-b",
+      "name": "CANALPLAY VOD 1 HD",
+      "slug": "canalplay-vod-1-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BgU4mA5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcanalplay-vod-1-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/canalplay-vod-1-hd-b"
+    },
+    {
+      "id": "cannes-lerins-tv-c",
+      "name": "CANNES LERINS TV",
+      "slug": "cannes-lerins-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/atlgnum.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcannes-lerins-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cannes-lerins-tv-c"
+    },
+    {
+      "id": "cartoon-network-fhd-s",
+      "name": "CARTOON NETWORK FHD",
+      "slug": "cartoon-network-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cartoon_Network_HD_logo.svg/960px-Cartoon_Network_HD_logo.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcartoon-network-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cartoon-network-fhd-s"
+    },
+    {
+      "id": "cartoonito-c",
+      "name": "CARTOONITO",
+      "slug": "cartoonito-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/960px-Cartoonito_-_Logo_2021.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcartoonito-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cartoonito-c"
+    },
+    {
+      "id": "catfish-c",
+      "name": "CATFISH",
+      "slug": "catfish-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://images.pluto.tv/channels/6093f9ed2c75660007322bb7/colorLogoPNG_1750862971704.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcatfish-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/catfish-c"
+    },
+    {
+      "id": "cgtn-s",
+      "name": "CGTN",
+      "slug": "cgtn-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/CGTN.svg/960px-CGTN.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcgtn-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cgtn-s"
+    },
+    {
+      "id": "cgtn-fran-ais-c",
+      "name": "CGTN FRANÇAIS",
+      "slug": "cgtn-fran-ais-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BwhledK.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcgtn-fran-ais-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cgtn-fran-ais-c"
+    },
+    {
+      "id": "chasse-peche-hd-s",
+      "name": "CHASSE&PECHE HD",
+      "slug": "chasse-peche-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ZIS2ZQ1.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fchasse-peche-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/chasse-peche-hd-s"
+    },
+    {
+      "id": "chasse-et-peche-b",
+      "name": "CHASSE ET PECHE",
+      "slug": "chasse-et-peche-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ZIS2ZQ1.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fchasse-et-peche-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/chasse-et-peche-b"
+    },
+    {
+      "id": "cherie-25-fhd-s",
+      "name": "CHERIE 25 FHD",
+      "slug": "cherie-25-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://img1.dc2.oqee.net/channel_pictures/3606/w512",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcherie-25-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cherie-25-fhd-s"
+    },
+    {
+      "id": "cin-polar-b",
+      "name": "CIN POLAR",
+      "slug": "cin-polar-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/pTJHIX1.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcin-polar-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cin-polar-b"
+    },
+    {
+      "id": "cina-classic-b",
+      "name": "CINA+ CLASSIC",
+      "slug": "cina-classic-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ocs2DeU.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcina-classic-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cina-classic-b"
+    },
+    {
+      "id": "cina-premier-b",
+      "name": "CINA+ PREMIER",
+      "slug": "cina-premier-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ColyEpT.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcina-premier-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cina-premier-b"
+    },
+    {
+      "id": "cine-classic-fhd-b",
+      "name": "CINE+ CLASSIC FHD",
+      "slug": "cine-classic-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/y2zeLS3.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-classic-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-classic-fhd-b"
+    },
+    {
+      "id": "cine-club-fhd-b",
+      "name": "CINE+ CLUB FHD",
+      "slug": "cine-club-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/OJfAUMj.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-club-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-club-fhd-b"
+    },
+    {
+      "id": "cine-emotion-fhd-b",
+      "name": "CINE+ EMOTION FHD",
+      "slug": "cine-emotion-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/upYjPvc.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-emotion-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-emotion-fhd-b"
+    },
+    {
+      "id": "cine-famiz-fhd-b",
+      "name": "CINE+ FAMIZ FHD",
+      "slug": "cine-famiz-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/BR6m2yX.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-famiz-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-famiz-fhd-b"
+    },
+    {
+      "id": "cine-frisson-fhd-b",
+      "name": "CINE+ FRISSON FHD",
+      "slug": "cine-frisson-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/MwFtbnR.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-frisson-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-frisson-fhd-b"
+    },
+    {
+      "id": "cine-max-b",
+      "name": "CINE MAX",
+      "slug": "cine-max-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/XohYfjL.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-max-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-max-b"
+    },
+    {
+      "id": "cine-polar-s",
+      "name": "CINE POLAR+",
+      "slug": "cine-polar-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/pTJHIX1.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-polar-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-polar-s"
+    },
+    {
+      "id": "cine-premier-fhd-b",
+      "name": "CINE+ PREMIER FHD",
+      "slug": "cine-premier-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/b20LLN6.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-premier-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-premier-fhd-b"
+    },
+    {
+      "id": "cine-c",
+      "name": "CINE+",
+      "slug": "cine-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ujin9Uf.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-c"
+    },
+    {
+      "id": "cine-action-hd-b",
+      "name": "CINE+ ACTION HD",
+      "slug": "cine-action-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/zOXN7hX.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-action-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-action-hd-b"
+    },
+    {
+      "id": "cine-festival-c",
+      "name": "CINE+ FESTIVAL",
+      "slug": "cine-festival-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ROvEXf9.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-festival-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-festival-c"
+    },
+    {
+      "id": "cine-frission-4k-b",
+      "name": "CINE+ FRISSION 4K",
+      "slug": "cine-frission-4k-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/GZFTMFj.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-frission-4k-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-frission-4k-b"
+    },
+    {
+      "id": "cine-fx-hd-b",
+      "name": "CINE+ FX HD",
+      "slug": "cine-fx-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/GZFTMFj.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-fx-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-fx-hd-b"
+    },
+    {
+      "id": "cine-isson-b",
+      "name": "CINE+ ISSON",
+      "slug": "cine-isson-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/GZFTMFj.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-isson-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-isson-b"
+    },
+    {
+      "id": "cine-ocs-c",
+      "name": "CINE+ OCS",
+      "slug": "cine-ocs-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ujin9Uf.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-ocs-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-ocs-c"
+    },
+    {
+      "id": "cine-star-hd-b",
+      "name": "CINE+ STAR HD",
+      "slug": "cine-star-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/GZFTMFj.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcine-star-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cine-star-hd-b"
+    },
+    {
+      "id": "classicc-b",
+      "name": "CLASSICC",
+      "slug": "classicc-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Du7C9K4.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fclassicc-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/classicc-b"
+    },
+    {
+      "id": "clique-tv-hd-b",
+      "name": "CLIQUE.TV HD",
+      "slug": "clique-tv-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/0mFP02H.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fclique-tv-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/clique-tv-hd-b"
+    },
+    {
+      "id": "clique-tv-sd-b",
+      "name": "CLIQUE.TV SD",
+      "slug": "clique-tv-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/0mFP02H.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fclique-tv-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/clique-tv-sd-b"
+    },
+    {
+      "id": "clubbing-tv-c",
+      "name": "CLUBBING TV",
+      "slug": "clubbing-tv-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/MyiA92q.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fclubbing-tv-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/clubbing-tv-c"
+    },
+    {
+      "id": "comedie-fhd-s",
+      "name": "COMEDIE+ FHD",
+      "slug": "comedie-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/ArgX0Af.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcomedie-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/comedie-fhd-s"
+    },
+    {
+      "id": "comedy-central-hd-s",
+      "name": "COMEDY CENTRAL HD",
+      "slug": "comedy-central-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Comedy_Central_2018.svg/960px-Comedy_Central_2018.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcomedy-central-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/comedy-central-hd-s"
+    },
+    {
+      "id": "crime-district-b",
+      "name": "CRIME DISTRICT",
+      "slug": "crime-district-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/WQJ6Lbk.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcrime-district-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/crime-district-b"
+    },
+    {
+      "id": "cuisines-s",
+      "name": "CUISINES",
+      "slug": "cuisines-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/Fh7uO2M.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fcuisines-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/cuisines-s"
+    },
+    {
+      "id": "dazn-1-s",
+      "name": "DAZN 1",
+      "slug": "dazn-1-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-1-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-1-s"
+    },
+    {
+      "id": "dazn-2-c",
+      "name": "DAZN 2",
+      "slug": "dazn-2-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/OGj3qf5.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-2-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-2-c"
+    },
+    {
+      "id": "dazn-2-leauge-1-c",
+      "name": "DAZN 2 LEAUGE 1",
+      "slug": "dazn-2-leauge-1-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-2-leauge-1-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-2-leauge-1-c"
+    },
+    {
+      "id": "dazn-3-leauge-1-c",
+      "name": "DAZN 3 LEAUGE 1",
+      "slug": "dazn-3-leauge-1-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-3-leauge-1-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-3-leauge-1-c"
+    },
+    {
+      "id": "dazn-elevent1-hd-s",
+      "name": "DAZN ELEVENT1 HD",
+      "slug": "dazn-elevent1-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-elevent1-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-elevent1-hd-s"
+    },
+    {
+      "id": "dazn-ligue-1-live-1-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 1 FHD",
+      "slug": "dazn-ligue-1-live-1-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-1-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-1-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-2-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 2 FHD",
+      "slug": "dazn-ligue-1-live-2-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-2-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-2-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-2-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 2 SD",
+      "slug": "dazn-ligue-1-live-2-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-2-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-2-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-3-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 3 FHD",
+      "slug": "dazn-ligue-1-live-3-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-3-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-3-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-3-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 3 SD",
+      "slug": "dazn-ligue-1-live-3-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-3-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-3-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-4-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 4 FHD",
+      "slug": "dazn-ligue-1-live-4-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-4-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-4-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-4-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 4 SD",
+      "slug": "dazn-ligue-1-live-4-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-4-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-4-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-5-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 5 FHD",
+      "slug": "dazn-ligue-1-live-5-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-5-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-5-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-5-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 5 SD",
+      "slug": "dazn-ligue-1-live-5-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-5-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-5-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-6-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 6 FHD",
+      "slug": "dazn-ligue-1-live-6-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-6-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-6-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-6-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 6 SD",
+      "slug": "dazn-ligue-1-live-6-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-6-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-6-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-7-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 7 FHD",
+      "slug": "dazn-ligue-1-live-7-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-7-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-7-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-7-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 7 SD",
+      "slug": "dazn-ligue-1-live-7-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-7-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-7-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-8-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 8 FHD",
+      "slug": "dazn-ligue-1-live-8-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-8-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-8-fhd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-8-sd-b",
+      "name": "DAZN LIGUE 1 LIVE 8 SD",
+      "slug": "dazn-ligue-1-live-8-sd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-8-sd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-8-sd-b"
+    },
+    {
+      "id": "dazn-ligue-1-live-9-fhd-b",
+      "name": "DAZN LIGUE 1 LIVE 9 FHD",
+      "slug": "dazn-ligue-1-live-9-fhd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/2Z2EmZF.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-ligue-1-live-9-fhd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-ligue-1-live-9-fhd-b"
+    },
+    {
+      "id": "dazn-rise-women-sport-only-hd-s",
+      "name": "DAZN RISE (WOMEN SPORT ONLY) HD",
+      "slug": "dazn-rise-women-sport-only-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.ibb.co/1ZbXtD1/480px-RISE-FINAL-LOGO-1.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdazn-rise-women-sport-only-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/dazn-rise-women-sport-only-hd-s"
+    },
+    {
+      "id": "digital-black-music-dbm-c",
+      "name": "DIGITAL BLACK MUSIC (DBM)",
+      "slug": "digital-black-music-dbm-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/8DHmGQm.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdigital-black-music-dbm-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/digital-black-music-dbm-c"
+    },
+    {
+      "id": "discovery-channel-s",
+      "name": "DISCOVERY CHANNEL",
+      "slug": "discovery-channel-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdiscovery-channel-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/discovery-channel-s"
+    },
+    {
+      "id": "discovery-hd-b",
+      "name": "DISCOVERY HD",
+      "slug": "discovery-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdiscovery-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/discovery-hd-b"
+    },
+    {
+      "id": "discovery-investigation-hd-b",
+      "name": "DISCOVERY INVESTIGATION HD",
+      "slug": "discovery-investigation-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Investigation.svg/960px-Investigation.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdiscovery-investigation-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/discovery-investigation-hd-b"
+    },
+    {
+      "id": "discovery-sci-fi-s",
+      "name": "DISCOVERY SCI-FI",
+      "slug": "discovery-sci-fi-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdiscovery-sci-fi-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/discovery-sci-fi-s"
+    },
+    {
+      "id": "discovery-science-b",
+      "name": "DISCOVERY SCIENCE",
+      "slug": "discovery-science-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdiscovery-science-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/discovery-science-b"
+    },
+    {
+      "id": "discovery-world-c",
+      "name": "DISCOVERY WORLD",
+      "slug": "discovery-world-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/yNFmUkE.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdiscovery-world-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/discovery-world-c"
+    },
+    {
+      "id": "disney-channel-b",
+      "name": "DISNEY CHANNEL",
+      "slug": "disney-channel-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdisney-channel-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/disney-channel-b"
+    },
+    {
+      "id": "disney-cinema-hd-s",
+      "name": "DISNEY CINEMA HD",
+      "slug": "disney-cinema-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Disney_cinema_logo.png/960px-Disney_cinema_logo.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdisney-cinema-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/disney-cinema-hd-s"
+    },
+    {
+      "id": "disney-junior-fhd-s",
+      "name": "DISNEY JUNIOR FHD",
+      "slug": "disney-junior-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdisney-junior-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/disney-junior-fhd-s"
+    },
+    {
+      "id": "disney-xd-b",
+      "name": "DISNEY XD",
+      "slug": "disney-xd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA/images/LOGO_HD/image.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdisney-xd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/disney-xd-b"
+    },
+    {
+      "id": "disney-s",
+      "name": "DISNEY+",
+      "slug": "disney-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Disney%2B_Cinema_2026.webp/250px-Disney%2B_Cinema_2026.webp.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fdisney-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/disney-s"
+    },
+    {
+      "id": "e-c",
+      "name": "E!",
+      "slug": "e-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/TuFZuxO.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fe-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/e-c"
+    },
+    {
+      "id": "e-entertainment-b",
+      "name": "E! ENTERTAINMENT",
+      "slug": "e-entertainment-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1360.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fe-entertainment-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/e-entertainment-b"
+    },
+    {
+      "id": "elle-girl-b",
+      "name": "ELLE GIRL",
+      "slug": "elle-girl-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Elle_Fictions_logo.png/960px-Elle_Fictions_logo.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Felle-girl-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/elle-girl-b"
+    },
+    {
+      "id": "equidia-hd-b",
+      "name": "EQUIDIA HD",
+      "slug": "equidia-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/QPpbRcZ.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fequidia-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/equidia-hd-b"
+    },
+    {
+      "id": "equidia-pro-c",
+      "name": "EQUIDIA PRO",
+      "slug": "equidia-pro-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/hSIefAv.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fequidia-pro-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/equidia-pro-c"
+    },
+    {
+      "id": "equipe-hd-s",
+      "name": "EQUIPE HD",
+      "slug": "equipe-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/t35zhM9.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fequipe-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/equipe-hd-s"
+    },
+    {
+      "id": "es1-hd-s",
+      "name": "ES1 HD",
+      "slug": "es1-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/RLrMBlm.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Fes1-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/es1-hd-s"
+    },
+    {
+      "id": "euro-channel-c",
+      "name": "EURO CHANNEL",
+      "slug": "euro-channel-c",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/HFWWzKT.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feuro-channel-c%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/euro-channel-c"
+    },
+    {
+      "id": "euronews-hd-s",
+      "name": "EURONEWS HD",
+      "slug": "euronews-hd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork/bc84c3b7-6008-4ee3-8f6a-e4bb4365f082-width200-quality90.jpeg",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feuronews-hd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/euronews-hd-s"
+    },
+    {
+      "id": "eurosport-1-fhd-s",
+      "name": "EUROSPORT 1 FHD",
+      "slug": "eurosport-1-fhd-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/olQJgm7.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feurosport-1-fhd-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/eurosport-1-fhd-s"
+    },
+    {
+      "id": "eurosport-2-hd-b",
+      "name": "EUROSPORT 2 HD",
+      "slug": "eurosport-2-hd-b",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/f56dHgR.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feurosport-2-hd-b%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/eurosport-2-hd-b"
+    },
+    {
+      "id": "eurosport-360-4-s",
+      "name": "EUROSPORT 360 4",
+      "slug": "eurosport-360-4-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/q04IXvZ.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feurosport-360-4-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/eurosport-360-4-s"
+    },
+    {
+      "id": "eurosport-360-5-s",
+      "name": "EUROSPORT 360 5",
+      "slug": "eurosport-360-5-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/kwUbuYb.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feurosport-360-5-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/eurosport-360-5-s"
+    },
+    {
+      "id": "eurosport-360-6-s",
+      "name": "EUROSPORT 360 6",
+      "slug": "eurosport-360-6-s",
+      "country": "France",
+      "category": "TNT & Câble France",
+      "logo": "https://i.imgur.com/gERBekR.png",
+      "streamUrl": "https://northlive.lol/api/v1/index.php?route=tv%2Feurosport-360-6-s%2Fplayer&api_key=ff_ea4e1e98f822dddd9fee397f6ab9d4e55f49caf8e3f18e2f211e907a97123bb0",
+      "playerUrl": "https://xonaflix.fr/live-broadcast/eurosport-360-6-s"
+    }
+  ]
+}

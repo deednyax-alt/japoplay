@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - Qui visionne ?</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="profiles-wrapper">
+    <h1 class="profiles-title">Qui visionne ?</h1>
+    <div class="profiles-grid" id="profilesGrid"></div>
+    <div style="display: flex; gap: 16px;">
+      <button class="btn-secondary" id="manageBtn" onclick="toggleManageMode()">Gérer les profils</button>
+    </div>
+  </div>
+
+  <div class="profile-modal" id="addModal">
+    <div class="modal-content">
+      <h2 class="modal-title">Créer un profil</h2>
+      <input type="text" class="input-field" id="profileNameInput" placeholder="Nom du profil">
+      <div class="avatar-selector" id="avatarSelector"></div>
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <button class="btn-secondary" onclick="closeAddModal()">Annuler</button>
+        <button class="btn-primary" onclick="submitProfile()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-modal" id="editModal">
+    <div class="modal-content">
+      <h2 class="modal-title">Modifier le profil</h2>
+      <input type="text" class="input-field" id="editProfileNameInput" placeholder="Nom du profil">
+      <div class="avatar-selector" id="editAvatarSelector"></div>
+      <div style="display: flex; gap: 12px; justify-content: space-between; align-items: center;">
+        <button class="btn-secondary" style="border-color: #ef4444; color: #ef4444;" onclick="submitDeleteCurrentEditProfile()">Supprimer</button>
+        <div style="display: flex; gap: 12px;">
+          <button class="btn-secondary" onclick="closeEditModal()">Annuler</button>
+          <button class="btn-primary" onclick="submitSaveEditProfile()">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    let selectedAvatar = AVATARS[0];
+    let selectedEditAvatar = AVATARS[0];
+    let currentEditingId = null;
+    let isManaging = false;
+
+    function toggleManageMode() {
+      isManaging = !isManaging;
+      document.getElementById('manageBtn').textContent = isManaging ? 'Terminé' : 'Gérer les profils';
+      renderProfilesList();
+    }
+
+    function renderProfilesList() {
+      const grid = document.getElementById('profilesGrid');
+      const profiles = getProfiles();
+      const manageBtn = document.getElementById('manageBtn');
+
+      if (profiles.length === 0) {
+        if (manageBtn) manageBtn.style.display = 'none';
+        grid.innerHTML = `
+          <div style="text-align: center; grid-column: 1 / -1; padding: 30px 10px;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 2px dashed rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; color: #fff;">Créer un Compte / Profil</h2>
+            <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 0.95rem;">Aucun profil détecté. Veuillez créer votre compte pour accéder à JapoPlay.</p>
+            <button class="btn-primary" style="padding: 12px 24px; font-size: 0.95rem; font-weight: 700;" onclick="openAddModal(true)">
+              + Créer mon compte profil
+            </button>
+          </div>
+        `;
+        setTimeout(() => openAddModal(true), 100);
+        return;
+      }
+
+      if (manageBtn) manageBtn.style.display = 'inline-block';
+      grid.innerHTML = profiles.map(p => `
+        <div class="profile-card" onclick="${isManaging ? `openEditModal('${p.id}')` : `setCurrentProfile('${p.id}')`}">
+          <div class="profile-avatar-box" style="${isManaging ? 'border-color: rgba(255,255,255,0.8);' : ''}">
+            <img src="${p.avatar}" alt="${p.name}">
+            ${isManaging ? `
+              <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.55); display: flex; align-items: center; justify-content: center;">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+              <button onclick="event.stopPropagation(); removeP('${p.id}')" title="Supprimer" style="position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; border-radius: 50%; background: rgba(239, 68, 68, 0.9); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            ` : ''}
+          </div>
+          <span class="profile-name">${p.name}</span>
+        </div>
+      `).join('') + `
+        <div class="profile-card" onclick="openAddModal()">
+          <div class="profile-avatar-box add-profile-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+          </div>
+          <span class="profile-name">Ajouter</span>
+        </div>
+      `;
+    }
+
+    function removeP(id) {
+      deleteProfile(id);
+      renderProfilesList();
+    }
+
+    function openAddModal(isMandatory = false) {
+      const modal = document.getElementById('addModal');
+      modal.classList.add('active');
+      const cancelBtn = modal.querySelector('.btn-secondary');
+      const profiles = getProfiles();
+      const mandatory = isMandatory || profiles.length === 0;
+      if (cancelBtn) {
+        cancelBtn.style.display = mandatory ? 'none' : 'inline-block';
+      }
+      selectedAvatar = AVATARS[0];
+      const selector = document.getElementById('avatarSelector');
+      selector.innerHTML = AVATARS.map((av, idx) => `
+        <div class="avatar-opt ${idx === 0 ? 'selected' : ''}" onclick="selectAvatar('${av}', this)">
+          <img src="${av}">
+        </div>
+      `).join('');
+    }
+
+    function closeAddModal() {
+      const profiles = getProfiles();
+      if (profiles.length === 0) return;
+      document.getElementById('addModal').classList.remove('active');
+    }
+
+    function selectAvatar(url, el) {
+      selectedAvatar = url;
+      document.querySelectorAll('#avatarSelector .avatar-opt').forEach(opt => opt.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function submitProfile() {
+      const name = document.getElementById('profileNameInput').value.trim();
+      if (!name) return alert('Veuillez entrer un nom pour votre compte profil.');
+      saveNewProfile(name, selectedAvatar);
+      closeAddModal();
+      renderProfilesList();
+    }
+
+    function openEditModal(id) {
+      currentEditingId = id;
+      const profiles = getProfiles();
+      const p = profiles.find(item => item.id === id);
+      if (!p) return;
+
+      document.getElementById('editProfileNameInput').value = p.name;
+      selectedEditAvatar = p.avatar;
+
+      const selector = document.getElementById('editAvatarSelector');
+      selector.innerHTML = AVATARS.map(av => `
+        <div class="avatar-opt ${av === p.avatar ? 'selected' : ''}" onclick="selectEditAvatar('${av}', this)">
+          <img src="${av}">
+        </div>
+      `).join('');
+
+      document.getElementById('editModal').classList.add('active');
+    }
+
+    function closeEditModal() {
+      document.getElementById('editModal').classList.remove('active');
+      currentEditingId = null;
+    }
+
+    function selectEditAvatar(url, el) {
+      selectedEditAvatar = url;
+      document.querySelectorAll('#editAvatarSelector .avatar-opt').forEach(opt => opt.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function submitSaveEditProfile() {
+      if (!currentEditingId) return;
+      const newName = document.getElementById('editProfileNameInput').value.trim();
+      if (!newName) return;
+      updateProfile(currentEditingId, newName, selectedEditAvatar);
+      closeEditModal();
+      renderProfilesList();
+    }
+
+    function submitDeleteCurrentEditProfile() {
+      if (!currentEditingId) return;
+      deleteProfile(currentEditingId);
+      closeEditModal();
+      renderProfilesList();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderProfilesList);
+  </script>
+</body>
+</html>

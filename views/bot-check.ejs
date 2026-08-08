@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - Protection Anti-DDoS & Vérification Sécurité 7H</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    :root {
+      --bg-dark: #050508;
+      --card-bg: rgba(14, 14, 18, 0.85);
+      --border-glow: rgba(255, 255, 255, 0.12);
+      --accent-white: #ffffff;
+      --accent-green: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+      user-select: none;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+
+    .top-status-bar {
+      position: fixed;
+      top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    .security-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 20px;
+      padding: 44px 40px;
+      max-width: 500px;
+      width: 92%;
+      text-align: center;
+      backdrop-filter: blur(30px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+      position: relative;
+      z-index: 10;
+    }
+
+    .icon-container {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 24px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-bg {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .radar-sweep {
+      position: absolute;
+      inset: -10px;
+      border-radius: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+      animation: rotateSweep 10s linear infinite;
+    }
+
+    .pulse-effect {
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      animation: pulseGlow 2.5s ease-out infinite;
+    }
+
+    @keyframes rotateSweep {
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+
+    .brand-title {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-badge {
+      background: #ffffff;
+      color: #000000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 1.1rem;
+    }
+
+    .sec-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      margin: 0 0 20px 0;
+      line-height: 1.5;
+    }
+
+    .token-timer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    .action-button {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 18px 24px;
+      width: 100%;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .action-button:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .action-button.verified {
+      background: rgba(34, 197, 94, 0.15);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+
+    .check-box-icon {
+      width: 22px;
+      height: 22px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .action-button.verified .check-box-icon {
+      background: var(--accent-green);
+      border-color: var(--accent-green);
+    }
+
+    .progress-bar-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: #ffffff;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .terminal-logs {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 24px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.74rem;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .log-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .telemetry-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .telemetry-val {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .telemetry-lbl {
+      font-size: 0.68rem;
+      color: var(--text-sub);
+      margin-top: 2px;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+  <div class="top-status-bar">
+    <div class="status-dot"></div>
+    <span>JapoShield™ Anti-DDoS Node #402 • Active</span>
+  </div>
+
+  <div class="security-card">
+    <div class="icon-container">
+      <div class="radar-sweep"></div>
+      <div class="pulse-effect"></div>
+      <div class="icon-bg">
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+    </div>
+
+    <div class="brand-title">JAPO<span class="brand-badge">PLAY</span></div>
+    <h2 style="font-size: 1.15rem; font-weight: 800; margin: 8px 0 6px 0; color: #fff;">Protection Anti-DDoS & Filtrage Sécurisé</h2>
+    <p class="sec-subtitle">Veuillez valider le contrôle de sécurité pour générer votre jeton d'accès temporaire d'une durée de <strong>7 heures</strong>.</p>
+
+    <div class="token-timer-pill">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Durée du jeton : <strong>7h 00m 00s</strong> (25 200s)</span>
+    </div>
+
+    <button class="action-button" id="challengeBtn" onclick="runChallenge()">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="check-box-icon" id="checkBoxIcon">
+          <svg id="checkSvg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3.5" style="display: none;"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span id="challengeLabel">Cliquer pour activer le jeton 7 Heures</span>
+      </div>
+      <div id="spinnerEl" style="display: none; width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </button>
+
+    <div class="terminal-logs">
+      <div class="log-line"><span style="color: #22c55e;">[LOG]</span> <span>Initialisation du mitigeur DDoS HTTP Flood...</span></div>
+      <div class="log-line"><span style="color: #22c55e;">[LOG]</span> <span>Vérification Empreinte TLS : <strong id="fpHash">Génération...</strong></span></div>
+      <div class="log-line"><span style="color: #3b82f6;">[INFO]</span> <span id="statusLog">En attente de validation par l'utilisateur...</span></div>
+    </div>
+
+    <div class="telemetry-grid">
+      <div class="telemetry-item">
+        <div class="telemetry-val" style="color: #22c55e;">99.9%</div>
+        <div class="telemetry-lbl">Attaques Filtrées</div>
+      </div>
+      <div class="telemetry-item">
+        <div class="telemetry-val">TLS 1.3</div>
+        <div class="telemetry-lbl">Cryptage AES</div>
+      </div>
+      <div class="telemetry-item">
+        <div class="telemetry-val">7 Heures</div>
+        <div class="telemetry-lbl">Validité Jeton</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const returnUrl = urlParams.get('returnUrl') || '/home';
+
+    function generateFingerprint() {
+      const nav = window.navigator;
+      const str = [
+        nav.userAgent,
+        nav.language,
+        screen.width + 'x' + screen.height,
+        new Date().getTimezoneOffset()
+      ].join('||');
+      
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return 'SEC-FP-' + Math.abs(hash).toString(16).toUpperCase();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('fpHash').textContent = generateFingerprint();
+    });
+
+    let isProcessing = false;
+
+    function runChallenge() {
+      if (isProcessing) return;
+      isProcessing = true;
+
+      const btn = document.getElementById('challengeBtn');
+      const label = document.getElementById('challengeLabel');
+      const spinner = document.getElementById('spinnerEl');
+      const checkSvg = document.getElementById('checkSvg');
+      const progressFill = document.getElementById('progressFill');
+      const statusLog = document.getElementById('statusLog');
+
+      label.textContent = 'Mitigation DDoS & Génération du jeton 7H...';
+      spinner.style.display = 'block';
+      statusLog.textContent = 'Analyse du trafic Layer-7 en cours...';
+
+      let pct = 0;
+      const interval = setInterval(() => {
+        pct += 10;
+        progressFill.style.width = pct + '%';
+        if (pct >= 100) {
+          clearInterval(interval);
+          finishVerification();
+        }
+      }, 90);
+
+      function finishVerification() {
+        const token = 'SEC-TOKEN-' + Math.random().toString(36).substring(2, 12).toUpperCase() + '-' + Date.now();
+        const expirySec = 7 * 3600;
+        document.cookie = `japoplay_sec_token=${token}; path=/; max-age=${expirySec}`;
+        document.cookie = `japoplay_sec_token_time=${Date.now()}; path=/; max-age=${expirySec}`;
+        
+        btn.classList.add('verified');
+        spinner.style.display = 'none';
+        checkSvg.style.display = 'block';
+        label.textContent = '✓ Jeton 7H Actif ! Accès Autorisé...';
+        statusLog.textContent = 'Jeton de 7 heures valide généré avec succès !';
+        statusLog.style.color = '#22c55e';
+
+        setTimeout(() => {
+          window.location.href = returnUrl;
+        }, 700);
+      }
+    }
+  </script>
+</body>
+</html>

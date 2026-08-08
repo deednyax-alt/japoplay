@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - Animes Japonais</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-left">
+      <a href="/home" class="brand-logo">JAPO<span>PLAY</span></a>
+      <ul class="nav-links">
+        <li><a href="/home">Accueil</a></li>
+        <li><a href="/movies">Films</a></li>
+        <li><a href="/series">Séries</a></li>
+        <li><a href="/anime" class="active">Animes</a></li>
+        <li><a href="/iptv">Live TV</a></li>
+        <li><a href="/history">Historique</a></li>
+        <li><a href="/my-list">Ma Liste</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <form action="/anime" method="GET" class="search-box">
+        <svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" name="q" value="<%= query %>" placeholder="Rechercher un anime...">
+      </form>
+      <a href="/profiles" class="current-profile-btn">
+        <img id="currentAvatar" src="" alt="Profile">
+      </a>
+    </div>
+  </nav>
+
+  <main style="padding: 100px 4% 40px 4%;">
+    <div class="section-header" style="margin-bottom: 30px;">
+      <h1 class="section-title" style="font-size: 2rem;">
+        Animes Japonais
+      </h1>
+      <span class="hero-badge">Page <%= page %> sur <%= totalPages %></span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px;">
+      <% results.forEach(item => { %>
+        <% if (item.poster_path) { %>
+          <a href="/series/<%= item.id %>" class="card-item" style="flex: auto;">
+            <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" alt="<%= item.name || item.title %>" class="card-poster">
+            <div class="card-info">
+              <div class="card-title"><%= item.name || item.title %></div>
+              <div class="card-meta">
+                <span><%= item.first_air_date ? item.first_air_date.substring(0,4) : 'ANIME' %></span>
+                <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
+              </div>
+            </div>
+          </a>
+        <% } %>
+      <% }) %>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 50px;">
+      <% if (page > 1) { %>
+        <a href="/anime?page=<%= page - 1 %><%= query ? '&q=' + encodeURIComponent(query) : '' %>" class="btn-secondary" style="padding: 10px 20px; display: flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          Page Précédente
+        </a>
+      <% } %>
+      <span style="font-weight: 700; color: var(--text-sub);">Page <%= page %> sur <%= totalPages %></span>
+      <% if (page < totalPages) { %>
+        <a href="/anime?page=<%= page + 1 %><%= query ? '&q=' + encodeURIComponent(query) : '' %>" class="btn-primary" style="padding: 10px 20px; display: flex; align-items: center; gap: 8px;">
+          Page Suivante
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      <% } %>
+    </div>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
