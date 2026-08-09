@@ -34,19 +34,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 const activeVisitorsMap = new Map();
 
 function trackVisitorMiddleware(req, res, next) {
+  const p = req.path;
+  const isStatic = p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p === '/favicon.ico';
+
   let vid = req.cookies ? req.cookies.japoplay_visitor_id : null;
-  if (!vid) {
+  if (!vid && !isStatic) {
     vid = 'v_' + Math.random().toString(36).substring(2, 11) + '_' + Date.now();
     res.cookie('japoplay_visitor_id', vid, { maxAge: 30 * 86400 * 1000, httpOnly: false, path: '/' });
   }
-  activeVisitorsMap.set(vid, Date.now());
+
+  if (vid) {
+    activeVisitorsMap.set(vid, Date.now());
+  }
   next();
 }
 
 app.use(trackVisitorMiddleware);
 
 function getActiveVisitorsCount() {
-  const cutoff = Date.now() - 25000;
+  const cutoff = Date.now() - 45000;
   for (const [vid, lastSeen] of activeVisitorsMap.entries()) {
     if (lastSeen < cutoff) {
       activeVisitorsMap.delete(vid);
@@ -83,7 +89,7 @@ const rateLimitMap = new Map();
 
 function botProtectionMiddleware(req, res, next) {
   const p = req.path;
-  if (p === '/bot-check' || p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p === '/favicon.ico') {
+  if (p === '/bot-check' || p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p.startsWith('/api/online-count') || p === '/favicon.ico') {
     return next();
   }
 

@@ -153,28 +153,42 @@ function initRealtimeOnlineCounter() {
   const countEls = document.querySelectorAll('.online-count-val');
   if (countEls.length === 0) return;
 
+  function updateDisplay(newCount) {
+    countEls.forEach(el => {
+      if (el.textContent !== String(newCount)) {
+        el.textContent = newCount;
+        el.style.display = 'inline-block';
+        el.style.transition = 'transform 0.2s ease, color 0.2s ease';
+        el.style.transform = 'scale(1.35)';
+        setTimeout(() => { el.style.transform = 'scale(1)'; }, 250);
+      }
+    });
+  }
+
   if (typeof EventSource !== 'undefined') {
-    const evtSource = new EventSource('/api/online-count/stream');
-    evtSource.onmessage = (e) => {
-      try {
-        const data = JSON.parse(e.data);
-        if (data && typeof data.count === 'number') {
-          countEls.forEach(el => el.textContent = data.count);
-        }
-      } catch (err) {}
-    };
+    try {
+      const evtSource = new EventSource('/api/online-count/stream');
+      evtSource.onmessage = (e) => {
+        try {
+          const data = JSON.parse(e.data);
+          if (data && typeof data.count === 'number') {
+            updateDisplay(data.count);
+          }
+        } catch (err) {}
+      };
+    } catch (err) {}
   }
 
   setInterval(() => {
-    fetch('/api/online-count')
+    fetch('/api/online-count', { cache: 'no-store' })
       .then(res => res.json())
       .then(data => {
         if (data && typeof data.count === 'number') {
-          countEls.forEach(el => el.textContent = data.count);
+          updateDisplay(data.count);
         }
       })
       .catch(() => {});
-  }, 8000);
+  }, 5000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
