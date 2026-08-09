@@ -8,32 +8,39 @@
 </head>
 <body>
   <div class="profiles-wrapper">
-    <h1 class="profiles-title">Qui visionne ?</h1>
+    <h1 class="profiles-title" id="pageTitle">Qui visionne ?</h1>
     <div class="profiles-grid" id="profilesGrid"></div>
-    <div style="display: flex; gap: 16px;">
-      <button class="btn-secondary" id="manageBtn" onclick="toggleManageMode()">Gérer les profils</button>
+    <div style="display: flex; gap: 16px; margin-top: 10px;" id="actionButtonsRow">
+      <button class="btn-primary" onclick="openAddModal()">+ Nouveau profil</button>
+      <button class="btn-secondary" id="manageBtn" onclick="toggleManageMode()">✏️ Gérer les profils</button>
     </div>
   </div>
 
+  <!-- Modal 1: Création de Profil -->
   <div class="profile-modal" id="addModal">
     <div class="modal-content">
-      <h2 class="modal-title">Créer un profil</h2>
-      <input type="text" class="input-field" id="profileNameInput" placeholder="Nom du profil">
+      <h2 class="modal-title" id="addModalTitle">Créer un profil</h2>
+      <p style="color: var(--text-sub); font-size: 0.88rem; margin-top: -16px; margin-bottom: 20px;" id="addModalSub">Entrez un nom et choisissez une icône pour votre profil JapoPlay.</p>
+      <input type="text" class="input-field" id="profileNameInput" placeholder="Nom du profil (ex: MangaFan, Cinephile...)">
+      <label style="display: block; font-size: 0.85rem; color: var(--text-sub); margin-bottom: 10px; text-align: left;">Choisir un Avatar :</label>
       <div class="avatar-selector" id="avatarSelector"></div>
-      <div style="display: flex; gap: 12px; justify-content: flex-end;">
-        <button class="btn-secondary" onclick="closeAddModal()">Annuler</button>
-        <button class="btn-primary" onclick="submitProfile()">Enregistrer</button>
+      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 12px;">
+        <button class="btn-secondary" id="cancelAddBtn" onclick="closeAddModal()">Annuler</button>
+        <button class="btn-primary" onclick="submitProfile()">Créer le profil</button>
       </div>
     </div>
   </div>
 
+  <!-- Modal 2: Modification de Profil -->
   <div class="profile-modal" id="editModal">
     <div class="modal-content">
       <h2 class="modal-title">Modifier le profil</h2>
+      <p style="color: var(--text-sub); font-size: 0.88rem; margin-top: -16px; margin-bottom: 20px;">Modifiez le nom, l'avatar ou supprimez ce profil.</p>
       <input type="text" class="input-field" id="editProfileNameInput" placeholder="Nom du profil">
+      <label style="display: block; font-size: 0.85rem; color: var(--text-sub); margin-bottom: 10px; text-align: left;">Changer d'Avatar :</label>
       <div class="avatar-selector" id="editAvatarSelector"></div>
-      <div style="display: flex; gap: 12px; justify-content: space-between; align-items: center;">
-        <button class="btn-secondary" style="border-color: #ef4444; color: #ef4444;" onclick="submitDeleteCurrentEditProfile()">Supprimer</button>
+      <div style="display: flex; gap: 12px; justify-content: space-between; align-items: center; margin-top: 12px;">
+        <button class="btn-secondary" style="border-color: #ef4444; color: #ef4444;" onclick="submitDeleteCurrentEditProfile()">Supprimer ce profil</button>
         <div style="display: flex; gap: 12px;">
           <button class="btn-secondary" onclick="closeEditModal()">Annuler</button>
           <button class="btn-primary" onclick="submitSaveEditProfile()">Enregistrer</button>
@@ -51,50 +58,52 @@
 
     function toggleManageMode() {
       isManaging = !isManaging;
-      document.getElementById('manageBtn').textContent = isManaging ? 'Terminé' : 'Gérer les profils';
+      const btn = document.getElementById('manageBtn');
+      if (btn) btn.textContent = isManaging ? '✓ Terminé' : '✏️ Gérer les profils';
       renderProfilesList();
     }
 
     function renderProfilesList() {
       const grid = document.getElementById('profilesGrid');
       const profiles = getProfiles();
-      const manageBtn = document.getElementById('manageBtn');
+      const actionRow = document.getElementById('actionButtonsRow');
+      const pageTitle = document.getElementById('pageTitle');
 
       if (profiles.length === 0) {
-        if (manageBtn) manageBtn.style.display = 'none';
+        if (actionRow) actionRow.style.display = 'none';
+        if (pageTitle) pageTitle.textContent = 'Création de Compte';
         grid.innerHTML = `
-          <div style="text-align: center; grid-column: 1 / -1; padding: 30px 10px;">
-            <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 2px dashed rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div style="text-align: center; grid-column: 1 / -1; padding: 40px 20px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.15); border-radius: 16px;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
-            <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; color: #fff;">Créer un Compte / Profil</h2>
-            <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px; font-size: 0.95rem;">Aucun profil détecté. Veuillez créer votre compte pour accéder à JapoPlay.</p>
-            <button class="btn-primary" style="padding: 12px 24px; font-size: 0.95rem; font-weight: 700;" onclick="openAddModal(true)">
-              + Créer mon compte profil
+            <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; color: #fff;">Bienvenue sur JapoPlay</h2>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px; font-size: 0.95rem; max-width: 420px; margin-left: auto; margin-right: auto;">Création de compte obligatoire. Veuillez créer votre premier profil pour accéder à la plateforme.</p>
+            <button class="btn-primary" style="padding: 12px 28px; font-size: 1rem; font-weight: 700;" onclick="openAddModal(true)">
+              + Créer mon profil
             </button>
           </div>
         `;
-        setTimeout(() => openAddModal(true), 100);
+        setTimeout(() => openAddModal(true), 150);
         return;
       }
 
-      if (manageBtn) manageBtn.style.display = 'inline-block';
+      if (actionRow) actionRow.style.display = 'flex';
+      if (pageTitle) pageTitle.textContent = isManaging ? 'Gérer les profils' : 'Qui visionne ?';
+
       grid.innerHTML = profiles.map(p => `
         <div class="profile-card" onclick="${isManaging ? `openEditModal('${p.id}')` : `setCurrentProfile('${p.id}')`}">
-          <div class="profile-avatar-box" style="${isManaging ? 'border-color: rgba(255,255,255,0.8);' : ''}">
+          <div class="profile-avatar-box" style="${isManaging ? 'border-color: rgba(255,255,255,0.9); box-shadow: 0 0 15px rgba(255,255,255,0.2);' : ''}">
             <img src="${p.avatar}" alt="${p.name}">
             ${isManaging ? `
-              <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.55); display: flex; align-items: center; justify-content: center;">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
               </div>
-              <button onclick="event.stopPropagation(); removeP('${p.id}')" title="Supprimer" style="position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; border-radius: 50%; background: rgba(239, 68, 68, 0.9); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-              </button>
             ` : ''}
           </div>
-          <span class="profile-name">${p.name}</span>
+          <span class="profile-name">${p.name} ${isManaging ? '✏️' : ''}</span>
         </div>
-      `).join('') + `
+      `).join('') + (isManaging ? '' : `
         <div class="profile-card" onclick="openAddModal()">
           <div class="profile-avatar-box add-profile-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -103,23 +112,28 @@
           </div>
           <span class="profile-name">Ajouter</span>
         </div>
-      `;
-    }
-
-    function removeP(id) {
-      deleteProfile(id);
-      renderProfilesList();
+      `);
     }
 
     function openAddModal(isMandatory = false) {
+      isManaging = false;
+      const btn = document.getElementById('manageBtn');
+      if (btn) btn.textContent = '✏️ Gérer les profils';
+
       const modal = document.getElementById('addModal');
       modal.classList.add('active');
-      const cancelBtn = modal.querySelector('.btn-secondary');
+      const cancelBtn = document.getElementById('cancelAddBtn');
       const profiles = getProfiles();
       const mandatory = isMandatory || profiles.length === 0;
+
       if (cancelBtn) {
         cancelBtn.style.display = mandatory ? 'none' : 'inline-block';
       }
+
+      document.getElementById('addModalTitle').textContent = mandatory ? 'Création de votre Compte JapoPlay' : 'Créer un nouveau profil';
+      document.getElementById('addModalSub').textContent = mandatory ? 'Entrez votre nom et choisissez un avatar pour déverrouiller l\'accès au site.' : 'Entrez un nom et choisissez une icône pour votre profil.';
+
+      document.getElementById('profileNameInput').value = '';
       selectedAvatar = AVATARS[0];
       const selector = document.getElementById('avatarSelector');
       selector.innerHTML = AVATARS.map((av, idx) => `
@@ -190,6 +204,7 @@
 
     function submitDeleteCurrentEditProfile() {
       if (!currentEditingId) return;
+      if (!confirm('Voulez-vous vraiment supprimer ce profil ?')) return;
       deleteProfile(currentEditingId);
       closeEditModal();
       renderProfilesList();
