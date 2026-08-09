@@ -149,6 +149,34 @@ function clearWatchHistory() {
   localStorage.removeItem(key);
 }
 
+function initRealtimeOnlineCounter() {
+  const countEls = document.querySelectorAll('.online-count-val');
+  if (countEls.length === 0) return;
+
+  if (typeof EventSource !== 'undefined') {
+    const evtSource = new EventSource('/api/online-count/stream');
+    evtSource.onmessage = (e) => {
+      try {
+        const data = JSON.parse(e.data);
+        if (data && typeof data.count === 'number') {
+          countEls.forEach(el => el.textContent = data.count);
+        }
+      } catch (err) {}
+    };
+  }
+
+  setInterval(() => {
+    fetch('/api/online-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data && typeof data.count === 'number') {
+          countEls.forEach(el => el.textContent = data.count);
+        }
+      })
+      .catch(() => {});
+  }, 8000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
   const profiles = getProfiles();
@@ -157,6 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = '/profiles';
     return;
   }
+
+  initRealtimeOnlineCounter();
 
   const navbar = document.querySelector('.navbar');
   if (navbar) {

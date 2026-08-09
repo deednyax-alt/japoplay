@@ -30,6 +30,54 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// --- Real-time Active Visitors Counter ---
+const activeVisitorsMap = new Map();
+
+function trackVisitorMiddleware(req, res, next) {
+  let vid = req.cookies ? req.cookies.japoplay_visitor_id : null;
+  if (!vid) {
+    vid = 'v_' + Math.random().toString(36).substring(2, 11) + '_' + Date.now();
+    res.cookie('japoplay_visitor_id', vid, { maxAge: 30 * 86400 * 1000, httpOnly: false, path: '/' });
+  }
+  activeVisitorsMap.set(vid, Date.now());
+  next();
+}
+
+app.use(trackVisitorMiddleware);
+
+function getActiveVisitorsCount() {
+  const cutoff = Date.now() - 25000;
+  for (const [vid, lastSeen] of activeVisitorsMap.entries()) {
+    if (lastSeen < cutoff) {
+      activeVisitorsMap.delete(vid);
+    }
+  }
+  return Math.max(1, activeVisitorsMap.size);
+}
+
+app.get('/api/online-count', (req, res) => {
+  res.json({ count: getActiveVisitorsCount() });
+});
+
+app.get('/api/online-count/stream', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  const sendCount = () => {
+    const data = JSON.stringify({ count: getActiveVisitorsCount() });
+    res.write(`data: ${data}\n\n`);
+  };
+
+  sendCount();
+  const interval = setInterval(sendCount, 3000);
+
+  req.on('close', () => {
+    clearInterval(interval);
+  });
+});
+
 const SEVEN_HOURS_MS = 7 * 3600 * 1000;
 const rateLimitMap = new Map();
 
