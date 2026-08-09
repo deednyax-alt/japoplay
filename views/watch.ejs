@@ -63,6 +63,10 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           <% } %>
+          <button onclick="toggleFullscreen()" class="btn-secondary" title="Plein Écran (F)" style="padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            <span>Plein Écran</span>
+          </button>
           <div class="badge-hd">HD 1080P</div>
         </div>
       </div>
@@ -452,23 +456,30 @@
     }
 
     function toggleFullscreen() {
-      const root = document.getElementById('playerRoot');
+      const root = document.getElementById('playerRoot') || document.documentElement;
       const video = document.getElementById('videoElement');
+      const iframe = document.getElementById('iframeElement');
 
-      if (video && video.webkitEnterFullscreen && typeof root.requestFullscreen === 'undefined') {
+      // Native iOS Safari video element fullscreen support
+      if (video && video.webkitEnterFullscreen && (/iPhone|iPad|iPod/i.test(navigator.userAgent) || typeof root.requestFullscreen === 'undefined')) {
         video.webkitEnterFullscreen();
         return;
       }
 
-      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
-        if (root.requestFullscreen) {
-          root.requestFullscreen();
-        } else if (root.webkitRequestFullscreen) {
-          root.webkitRequestFullscreen();
-        } else if (root.mozRequestFullScreen) {
-          root.mozRequestFullScreen();
-        } else if (root.msRequestFullscreen) {
-          root.msRequestFullscreen();
+      const isFs = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+
+      if (!isFs) {
+        const target = root || iframe || video || document.documentElement;
+        if (target.requestFullscreen) {
+          target.requestFullscreen().catch(() => {
+            if (video && video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+          });
+        } else if (target.webkitRequestFullscreen) {
+          target.webkitRequestFullscreen();
+        } else if (target.mozRequestFullScreen) {
+          target.mozRequestFullScreen();
+        } else if (target.msRequestFullscreen) {
+          target.msRequestFullscreen();
         } else if (video && video.webkitEnterFullscreen) {
           video.webkitEnterFullscreen();
         }
@@ -484,6 +495,12 @@
         }
       }
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      }
+    });
 
     document.addEventListener('mousemove', () => {
       const overlay = document.getElementById('overlayControls');

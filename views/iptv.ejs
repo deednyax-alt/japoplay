@@ -60,7 +60,13 @@
       <div style="background: #000; border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; position: relative;">
         <div style="padding: 16px; background: rgba(18,18,22,0.9); border-bottom: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between;">
           <h2 id="activeChannelTitle" style="font-size: 1.1rem; font-weight: 700;">Sélectionnez une chaîne</h2>
-          <span style="font-size: 0.8rem; background: #ffffff; color: #000000; font-weight: 800; padding: 2px 8px; border-radius: 4px;">EN DIRECT</span>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <button onclick="toggleTvFullscreen()" class="btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              <span>Plein Écran</span>
+            </button>
+            <span style="font-size: 0.8rem; background: #ffffff; color: #000000; font-weight: 800; padding: 2px 8px; border-radius: 4px;">EN DIRECT</span>
+          </div>
         </div>
         <div id="tvPlayerBox" style="flex: 1; display: flex; align-items: center; justify-content: center; background: #000;">
           <iframe id="tvIframe" style="width: 100%; height: 100%; border: none;" allowfullscreen allow="autoplay; encrypted-media"></iframe>
@@ -90,6 +96,28 @@
         const txt = item.textContent.toLowerCase();
         item.style.display = txt.includes(q) ? 'flex' : 'none';
       });
+    }
+
+    function toggleTvFullscreen() {
+      const box = document.getElementById('tvPlayerBox');
+      const iframe = document.getElementById('tvIframe') || (box ? box.querySelector('iframe') : null);
+      const video = box ? box.querySelector('video') : null;
+
+      if (video && video.webkitEnterFullscreen && (/iPhone|iPad|iPod/i.test(navigator.userAgent) || typeof box.requestFullscreen === 'undefined')) {
+        video.webkitEnterFullscreen();
+        return;
+      }
+
+      const isFs = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement;
+      if (!isFs) {
+        const target = box || iframe || document.documentElement;
+        if (target.requestFullscreen) target.requestFullscreen().catch(() => { if (video && video.webkitEnterFullscreen) video.webkitEnterFullscreen(); });
+        else if (target.webkitRequestFullscreen) target.webkitRequestFullscreen();
+        else if (target.mozRequestFullScreen) target.mozRequestFullScreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
