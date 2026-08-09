@@ -136,7 +136,8 @@ select option {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+  flex-shrink: 0;
 }
 
 .search-box {
@@ -152,13 +153,14 @@ select option {
   padding: 8px 16px 8px 36px;
   color: #fff;
   font-size: 0.88rem;
-  width: 220px;
+  width: 200px;
   outline: none;
+  box-sizing: border-box;
   transition: width 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .search-box input:focus {
-  width: 280px;
+  width: 240px;
   background: rgba(255, 255, 255, 0.15);
   border-color: #ffffff;
 }
@@ -171,6 +173,7 @@ select option {
   stroke: var(--text-sub);
   fill: none;
   stroke-width: 2;
+  pointer-events: none;
 }
 
 .current-profile-btn {
@@ -734,16 +737,26 @@ select option {
 
   .nav-right {
     gap: 8px;
+    flex-shrink: 0;
   }
 
   .search-box {
-    width: 120px;
+    width: auto;
+    max-width: 120px;
+    flex-shrink: 1;
   }
 
   .search-box input {
     font-size: 0.75rem;
     padding: 5px 8px 5px 28px;
     height: 32px;
+    width: 100% !important;
+    max-width: 120px !important;
+  }
+
+  .search-box input:focus {
+    width: 100% !important;
+    max-width: 120px !important;
   }
 
   .search-box svg {
@@ -756,11 +769,18 @@ select option {
     padding: 6px 10px;
     font-size: 0.78rem;
     gap: 4px;
+    flex-shrink: 0 !important;
   }
 
   .discord-btn svg {
     width: 16px;
     height: 16px;
+  }
+
+  .current-profile-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0 !important;
   }
 
   .current-profile-btn img {
@@ -879,12 +899,29 @@ select option {
 }
 
 @media screen and (max-width: 480px) {
+  .nav-right {
+    gap: 6px;
+  }
+
   .search-box {
-    width: 95px;
+    width: auto;
+    max-width: 90px;
+  }
+
+  .search-box input {
+    width: 100% !important;
+    max-width: 90px !important;
+    font-size: 0.7rem;
+    padding: 5px 6px 5px 24px;
+  }
+
+  .search-box input:focus {
+    width: 100% !important;
+    max-width: 90px !important;
   }
 
   .search-box input::placeholder {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
   }
 
   .discord-btn span {
@@ -892,8 +929,19 @@ select option {
   }
 
   .discord-btn {
-    padding: 7px;
+    padding: 6px;
     border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0 !important;
+  }
+
+  .current-profile-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0 !important;
   }
 
   .cards-grid {
