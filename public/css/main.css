@@ -641,5 +641,75 @@ select option {
 
   .bottom-bar {
     padding: 12px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+}
+
+/* --- Discord Integration Styles --- */
+.discord-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #5865F2;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(88, 101, 242, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.discord-btn:hover {
+  background: #4752C4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.55);
+}
+
+.discord-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.discord-banner-section {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.18) 0%, rgba(15, 15, 20, 0.95) 100%);
+  border: 1px solid rgba(88, 101, 242, 0.35);
+  border-radius: 16px;
+  padding: 32px 40px;
+  margin: 50px 4% 30px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.discord-banner-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.discord-banner-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .discord-banner-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+  .discord-banner-content h2 {
+    justify-content: center;
   }
 }
