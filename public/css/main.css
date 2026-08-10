@@ -682,31 +682,31 @@ select option {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   background: #5865F2 !important;
   color: #ffffff !important;
-  padding: 14px 28px;
-  border-radius: 12px;
+  padding: 12px 24px;
+  border-radius: 10px;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
+  box-shadow: 0 4px 16px rgba(88, 101, 242, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.25);
   white-space: nowrap;
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 .discord-banner-btn:hover {
   background: #4752C4 !important;
   color: #ffffff !important;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(88, 101, 242, 0.65);
 }
 
 .discord-banner-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: #ffffff !important;
 }
 
@@ -714,37 +714,37 @@ select option {
   background: linear-gradient(135deg, rgba(88, 101, 242, 0.22) 0%, rgba(15, 15, 20, 0.96) 100%);
   border: 1px solid rgba(88, 101, 242, 0.45);
   border-radius: 16px;
-  padding: 28px 36px;
-  margin: 45px auto 30px auto;
-  max-width: 1000px;
-  width: 92%;
+  padding: 24px 32px;
+  margin: 40px auto 30px auto;
+  max-width: 900px;
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 32px;
+  justify-content: center;
+  gap: 24px;
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 .discord-banner-content {
-  flex: 1;
+  flex: 0 1 auto;
+  max-width: 560px;
 }
 
 .discord-banner-content h2 {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .discord-banner-content p {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.92rem;
-  max-width: 600px;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  line-height: 1.45;
   margin: 0;
 }
 
