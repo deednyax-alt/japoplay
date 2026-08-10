@@ -648,6 +648,24 @@ select option {
 
 
 /* --- Discord Integration Styles --- */
+.discord-icon-badge {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.discord-icon-badge svg,
+.discord-blue-logo {
+  fill: #5865F2 !important;
+}
+
 .discord-btn {
   display: inline-flex;
   align-items: center;
@@ -672,17 +690,21 @@ select option {
   box-shadow: 0 6px 20px rgba(88, 101, 242, 0.65);
 }
 
+.discord-btn:hover .discord-icon-badge {
+  transform: scale(1.1);
+}
+
 .discord-btn svg {
-  width: 18px;
-  height: 18px;
-  fill: #ffffff !important;
+  width: 16px;
+  height: 16px;
+  fill: #5865F2 !important;
 }
 
 .discord-banner-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   background: #5865F2 !important;
   color: #ffffff !important;
   padding: 12px 24px;
@@ -697,6 +719,17 @@ select option {
   flex: 0 0 auto;
 }
 
+.discord-banner-btn .discord-icon-badge {
+  width: 28px;
+  height: 28px;
+}
+
+.discord-banner-btn .discord-icon-badge svg {
+  width: 18px;
+  height: 18px;
+  fill: #5865F2 !important;
+}
+
 .discord-banner-btn:hover {
   background: #4752C4 !important;
   color: #ffffff !important;
@@ -704,10 +737,8 @@ select option {
   box-shadow: 0 6px 22px rgba(88, 101, 242, 0.65);
 }
 
-.discord-banner-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: #ffffff !important;
+.discord-banner-btn:hover .discord-icon-badge {
+  transform: scale(1.1);
 }
 
 .discord-banner-section {
