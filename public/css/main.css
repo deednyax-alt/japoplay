@@ -200,11 +200,13 @@ select option {
 .hero,
 .hero-banner {
   position: relative;
-  height: 82vh;
-  min-height: 560px;
+  height: 72vh;
+  min-height: 440px;
+  max-height: 580px;
   display: flex;
-  align-items: center;
-  padding: 120px 5% 80px 5%;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 85px 4% 35px 4%;
   overflow: hidden;
   background: #09090b;
 }
@@ -226,50 +228,50 @@ select option {
   inset: 0;
   z-index: 2;
   background: 
-    linear-gradient(to right, #09090b 0%, rgba(9, 9, 11, 0.85) 35%, rgba(9, 9, 11, 0.3) 65%, transparent 100%),
-    linear-gradient(to top, #09090b 0%, rgba(9, 9, 11, 0.6) 25%, transparent 60%),
-    linear-gradient(to bottom, rgba(9, 9, 11, 0.5) 0%, transparent 30%);
+    linear-gradient(to right, #09090b 0%, rgba(9, 9, 11, 0.88) 40%, rgba(9, 9, 11, 0.35) 70%, transparent 100%),
+    linear-gradient(to top, #09090b 0%, rgba(9, 9, 11, 0.7) 25%, transparent 60%),
+    linear-gradient(to bottom, rgba(9, 9, 11, 0.6) 0%, transparent 30%);
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
-  max-width: 620px;
+  max-width: 600px;
 }
 
 .hero-tag,
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(229, 9, 20, 0.85);
+  gap: 6px;
+  background: #e50914;
   color: #ffffff;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.5px;
-  margin-bottom: 14px;
-  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+  margin-bottom: 10px;
+  box-shadow: 0 4px 14px rgba(229, 9, 20, 0.5);
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   color: #ffffff;
-  letter-spacing: -1px;
-  margin-bottom: 12px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95);
 }
 
 .hero-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 14px;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
@@ -279,21 +281,66 @@ select option {
 }
 
 .hero-overview {
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.5;
+  margin-bottom: 18px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  position: relative;
+  z-index: 20;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e50914 !important;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 18px rgba(229, 9, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background: #b90710 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(229, 9, 20, 0.75);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.32) !important;
+  transform: translateY(-2px);
 }
 
 .btn-primary {
