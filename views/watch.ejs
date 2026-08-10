@@ -63,6 +63,10 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           <% } %>
+          <button onclick="manualUnfreeze()" class="btn-secondary" title="Relancer si la vidéo se fige" style="padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; background: rgba(88,101,242,0.3); color: #fff; border: 1px solid rgba(88,101,242,0.6);">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <span>⚡ Anti-Gel</span>
+          </button>
           <button onclick="toggleFullscreen()" class="btn-secondary" title="Plein Écran (F)" style="padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
             <span>Plein Écran</span>
@@ -354,6 +358,49 @@
       });
     }
 
+    let freezeDetectorTimer = null;
+    let lastCheckTime = -1;
+    let freezeStuckCount = 0;
+
+    function initAntiFreezeGuard(video) {
+      if (!video) return;
+
+      const handleBufferStall = () => {
+        if (!video || video.paused || video.ended) return;
+        if (video.duration && video.currentTime < video.duration - 1) {
+          video.currentTime = Math.min(video.duration, video.currentTime + 0.35);
+          video.play().catch(() => {});
+        }
+      };
+
+      video.addEventListener('waiting', handleBufferStall);
+      video.addEventListener('stalled', handleBufferStall);
+      video.addEventListener('error', handleBufferStall);
+
+      if (freezeDetectorTimer) clearInterval(freezeDetectorTimer);
+      freezeDetectorTimer = setInterval(() => {
+        if (!video || video.paused || video.ended || video.readyState < 2) {
+          lastCheckTime = -1;
+          freezeStuckCount = 0;
+          return;
+        }
+
+        if (lastCheckTime > 0 && Math.abs(video.currentTime - lastCheckTime) < 0.05) {
+          freezeStuckCount++;
+          if (freezeStuckCount >= 2) {
+            freezeStuckCount = 0;
+            if (video.duration && video.currentTime < video.duration - 1) {
+              video.currentTime = Math.min(video.duration, video.currentTime + 0.4);
+              video.play().catch(() => {});
+            }
+          }
+        } else {
+          freezeStuckCount = 0;
+          lastCheckTime = video.currentTime;
+        }
+      }, 1200);
+    }
+
     function initPlayer(url, type) {
       const box = document.getElementById('playerBox');
       if (!box || !url) return;
@@ -374,12 +421,34 @@
         if (bottomBar) bottomBar.style.display = 'flex';
 
         if (url.includes('.m3u8') && Hls.isSupported()) {
-          const hls = new Hls();
+          const hls = new Hls({
+            enableWorker: true,
+            lowLatencyMode: false,
+            maxBufferLength: 60
+          });
           hls.loadSource(proxyUrl);
           hls.attachMedia(videoEl);
+
+          hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+              switch (data.type) {
+                case Hls.ErrorTypes.NETWORK_ERROR:
+                  hls.startLoad();
+                  break;
+                case Hls.ErrorTypes.MEDIA_ERROR:
+                  hls.recoverMediaError();
+                  break;
+                default:
+                  hls.destroy();
+                  break;
+              }
+            }
+          });
         } else {
           videoEl.src = proxyUrl;
         }
+
+        initAntiFreezeGuard(videoEl);
 
         videoEl.addEventListener('loadedmetadata', () => {
           if (savedPosition > 0) {
@@ -448,6 +517,20 @@
       if (!videoEl) return;
       videoEl.muted = !videoEl.muted;
       document.getElementById('volumeSlider').value = videoEl.muted ? 0 : videoEl.volume;
+    }
+
+    function manualUnfreeze() {
+      if (videoEl) {
+        if (videoEl.duration && videoEl.currentTime < videoEl.duration - 1) {
+          videoEl.currentTime = Math.min(videoEl.duration, videoEl.currentTime + 0.4);
+        }
+        videoEl.play().catch(() => {});
+      } else {
+        const iframe = document.getElementById('iframeElement');
+        if (iframe) {
+          iframe.src = iframe.src;
+        }
+      }
     }
 
     function switchSourceFromSelect(idx) {
