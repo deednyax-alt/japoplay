@@ -745,38 +745,41 @@ select option {
   background: linear-gradient(135deg, rgba(88, 101, 242, 0.22) 0%, rgba(15, 15, 20, 0.96) 100%);
   border: 1px solid rgba(88, 101, 242, 0.45);
   border-radius: 16px;
-  padding: 24px 32px;
-  margin: 40px auto 30px auto;
-  max-width: 900px;
+  padding: 26px 28px;
+  margin: 35px auto 25px auto;
+  max-width: 760px;
   width: 90%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 24px;
+  text-align: center;
+  gap: 14px;
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 .discord-banner-content {
   flex: 0 1 auto;
-  max-width: 560px;
+  max-width: 600px;
+  text-align: center;
 }
 
 .discord-banner-content h2 {
   font-size: 1.35rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
 .discord-banner-content p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
   line-height: 1.45;
-  margin: 0;
+  margin: 0 auto;
 }
 
 /* --- Mobile Responsiveness --- */
