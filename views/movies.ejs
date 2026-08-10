@@ -47,10 +47,10 @@
       <span class="hero-badge">Page <%= page %> sur <%= totalPages %></span>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px;">
+    <div class="cards-grid">
       <% movies.forEach(item => { %>
         <% if (item.poster_path) { %>
-          <a href="/movie/<%= item.id %>" class="card-item" style="flex: auto;">
+          <a href="/movie/<%= item.id %>" class="card-item">
             <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" alt="<%= item.title %>" class="card-poster">
             <div class="card-info">
               <div class="card-title"><%= item.title %></div>

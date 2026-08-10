@@ -1090,12 +1090,14 @@ select option {
 
   .cards-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8px !important;
+    gap: 10px !important;
   }
 
   .card-item {
-    flex: 0 0 115px;
-}
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
 
 /* --- Real-time Active Visitors Badge --- */
 .online-badge {
