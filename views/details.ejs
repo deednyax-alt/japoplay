@@ -33,7 +33,12 @@
     </div>
   </nav>
 
-  <div class="hero-banner" style="height: 70vh; background-image: url('https://image.tmdb.org/t/p/original<%= item.backdrop_path %>');">
+  <div class="hero-banner" style="height: 70vh;">
+    <% if (item.backdrop_path) { %>
+      <img src="https://image.tmdb.org/t/p/original<%= item.backdrop_path %>" alt="<%= item.title || item.name %>" class="hero-backdrop">
+    <% } else if (item.poster_path) { %>
+      <img src="https://image.tmdb.org/t/p/original<%= item.poster_path %>" alt="<%= item.title || item.name %>" class="hero-backdrop">
+    <% } %>
     <div class="hero-overlay"></div>
     <div class="hero-content" style="max-width: 800px;">
       <span class="hero-badge"><%= type === 'movie' ? 'FILM' : 'SÉRIE TV' %> • <%= item.release_date || item.first_air_date ? (item.release_date || item.first_air_date).substring(0,4) : '' %></span>
