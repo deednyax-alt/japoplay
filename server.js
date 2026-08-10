@@ -449,17 +449,6 @@ app.get('/profiles', (req, res) => {
   res.render('profiles');
 });
 
-app.post('/api/admin/sync-config', (req, res) => {
-  if (req.body) {
-    if (typeof req.body.maintenanceMode === 'boolean') appConfig.maintenanceMode = req.body.maintenanceMode;
-    if (req.body.maintenanceMessage) appConfig.maintenanceMessage = req.body.maintenanceMessage;
-    if (req.body.featuredHeroId) appConfig.featuredHeroId = req.body.featuredHeroId;
-    if (req.body.announcementText !== undefined) appConfig.announcementText = req.body.announcementText;
-    if (req.body.adminPin) appConfig.adminPin = req.body.adminPin;
-  }
-  res.json({ ok: true, config: appConfig });
-});
-
 app.get('/admin', (req, res) => {
   const isAdmin = (req.session && req.session.isAdmin) || (req.cookies && req.cookies.japoplay_admin_auth === 'true');
   res.render('admin', {
