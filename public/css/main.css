@@ -711,34 +711,41 @@ select option {
 }
 
 .discord-banner-section {
-  background: linear-gradient(135deg, rgba(88, 101, 242, 0.18) 0%, rgba(15, 15, 20, 0.95) 100%);
-  border: 1px solid rgba(88, 101, 242, 0.35);
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.22) 0%, rgba(15, 15, 20, 0.96) 100%);
+  border: 1px solid rgba(88, 101, 242, 0.45);
   border-radius: 16px;
-  padding: 32px 40px;
-  margin: 50px 4% 30px 4%;
+  padding: 28px 36px;
+  margin: 45px auto 30px auto;
+  max-width: 1000px;
+  width: 92%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: flex-start;
+  gap: 32px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.discord-banner-content {
+  flex: 1;
 }
 
 .discord-banner-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 .discord-banner-content p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
-  max-width: 620px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+  max-width: 600px;
   line-height: 1.5;
+  margin: 0;
 }
 
 /* --- Mobile Responsiveness --- */
