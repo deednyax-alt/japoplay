@@ -7,7 +7,6 @@ const cors = require('cors');
 const cheerio = require('cheerio');
 
 const streamflixScraper = require('./streamflixScraper');
-const fs16Scraper = require('./fs16Scraper');
 const franimeScraper = require('./franimeScraper');
 const xonaflixTvScraper = require('./xonaflixTvScraper');
 
@@ -651,14 +650,12 @@ app.get('/watch', async (req, res) => {
     if (movieData) {
       titleDisplay = movieData.title;
       if (movieData.poster_path) posterUrl = 'https://image.tmdb.org/t/p/w500' + movieData.poster_path;
-      const [streamFr, streamOrig, fsStream] = await Promise.all([
+      const [streamFr, streamOrig] = await Promise.all([
         streamflixScraper.scrapeMovie(id, movieData.title),
-        movieData.original_title ? streamflixScraper.scrapeMovie(id, movieData.original_title) : null,
-        fs16Scraper.getFs16MovieStream(id, movieData.title)
+        movieData.original_title ? streamflixScraper.scrapeMovie(id, movieData.original_title) : null
       ]);
       if (streamFr) sources.push(streamFr);
       if (streamOrig) sources.push(streamOrig);
-      if (fsStream) sources.push(fsStream);
     }
   } else if (type === 'series' || type === 'anime') {
     const sNum = season || 1;
@@ -667,13 +664,11 @@ app.get('/watch', async (req, res) => {
     if (seriesData) {
       titleDisplay = `${seriesData.name} - S${sNum} E${epNum}`;
       if (seriesData.poster_path) posterUrl = 'https://image.tmdb.org/t/p/w500' + seriesData.poster_path;
-      const [sfStream, fsStream, frMatches] = await Promise.all([
+      const [sfStream, frMatches] = await Promise.all([
         streamflixScraper.scrapeSeries(id, sNum, epNum, seriesData.name),
-        fs16Scraper.getFs16EpisodeStream(id, sNum, epNum),
         franimeScraper.search(seriesData.name)
       ]);
       if (sfStream) sources.push(sfStream);
-      if (fsStream) sources.push(fsStream);
       if (frMatches && frMatches.length > 0) {
         const frDet = await franimeScraper.getAnimeDetails(frMatches[0].id);
         if (frDet && frDet.seasons) {
