@@ -414,6 +414,18 @@ select option {
   height: 6px;
 }
 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 20px;
+}
+
+.cards-grid .card-item {
+  width: 100%;
+  flex: none;
+  aspect-ratio: 2/3;
+}
+
 .card-item {
   flex: 0 0 190px;
   aspect-ratio: 2/3;
