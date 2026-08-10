@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapoPlay - Panneau d'Administration</title>
+  <link rel="stylesheet" href="/css/main.css?v=20260810_3">
+  <style>
+    body {
+      background: #09090b;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .admin-nav {
+      background: rgba(18, 18, 24, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .admin-brand {
+      font-size: 1.3rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .admin-brand span {
+      color: #e50914;
+    }
+
+    .admin-badge-head {
+      background: rgba(229, 9, 20, 0.15);
+      border: 1px solid rgba(229, 9, 20, 0.4);
+      color: #ef4444;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .admin-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 4%;
+    }
+
+    .login-box {
+      max-width: 420px;
+      margin: 80px auto;
+      background: rgba(18, 18, 24, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .login-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .pin-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      text-align: center;
+      letter-spacing: 8px;
+      font-weight: 800;
+      margin: 20px 0;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .pin-input:focus {
+      border-color: #5865F2;
+      box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .admin-card {
+      background: rgba(18, 18, 24, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-head {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .status-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .status-online {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #22c55e;
+    }
+
+    .status-maint {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ef4444;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #ffffff;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: #5865F2;
+    }
+
+    .form-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .btn-admin {
+      background: #5865F2;
+      color: #ffffff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.2s;
+    }
+
+    .btn-admin:hover {
+      background: #4752C4;
+    }
+
+    .btn-danger {
+      background: #e50914;
+    }
+
+    .btn-danger:hover {
+      background: #b90710;
+    }
+
+    .alert-banner {
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .alert-success {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #22c55e;
+    }
+
+    .alert-error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ef4444;
+    }
+
+    .preset-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .preset-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="admin-nav">
+    <a href="/home" class="admin-brand">
+      JAPO<span>PLAY</span>
+      <span class="admin-badge-head">ADMIN PANEL</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <a href="/home" target="_blank" style="color: rgba(255,255,255,0.7); font-weight: 700; text-decoration: none; font-size: 0.88rem;">🌐 Voir le Site →</a>
+      <% if (isAdmin) { %>
+        <form action="/admin/logout" method="POST" style="margin: 0;">
+          <button type="submit" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.8rem;">Déconnexion</button>
+        </form>
+      <% } %>
+    </div>
+  </nav>
+
+  <div class="admin-container">
+    <% if (success) { %>
+      <div class="alert-banner alert-success">✓ <%= success %></div>
+    <% } %>
+    <% if (error) { %>
+      <div class="alert-banner alert-error">⚠️ <%= error %></div>
+    <% } %>
+
+    <% if (!isAdmin) { %>
+      <div class="login-box">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🔑</div>
+        <div class="login-title">Connexion Administrateur</div>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.88rem;">Entrez votre code PIN secret d'accès au panneau de contrôle.</p>
+        <form action="/admin/login" method="POST">
+          <input type="password" name="pin" maxlength="10" placeholder="••••" class="pin-input" autofocus required>
+          <button type="submit" class="btn-admin">Accéder au Panneau</button>
+        </form>
+        <p style="margin-top: 16px; font-size: 0.75rem; color: rgba(255,255,255,0.4);">Code PIN par défaut : <strong>1234</strong></p>
+      </div>
+    <% } else { %>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h1 style="font-size: 1.8rem; font-weight: 900; margin: 0 0 6px 0;">Tableau de Bord Administrateur</h1>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0;">Gérez le mode maintenance, l'affichage vedette et les paramètres généraux du site.</p>
+        </div>
+        <div>
+          <% if (config.maintenanceMode) { %>
+            <div class="status-indicator status-maint">🔴 MODE MAINTENANCE ACTIF</div>
+          <% } else { %>
+            <div class="status-indicator status-online">🟢 SITE EN LIGNE</div>
+          <% } %>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+
+        <!-- Card 1: Maintenance Mode Toggle -->
+        <div class="admin-card">
+          <div class="card-head">
+            <span>🛠️ Mode Maintenance</span>
+            <% if (config.maintenanceMode) { %>
+              <span style="color: #ef4444; font-size: 0.8rem; font-weight: 800;">ACTIF</span>
+            <% } else { %>
+              <span style="color: #22c55e; font-size: 0.8rem; font-weight: 800;">INACTIF</span>
+            <% } %>
+          </div>
+          <form action="/admin/toggle-maintenance" method="POST">
+            <div class="form-group">
+              <label class="form-label">État du Site :</label>
+              <select name="maintenanceMode" class="form-input" style="font-weight: 700;">
+                <option value="false" <%= !config.maintenanceMode ? 'selected' : '' %>>🟢 En Ligne (Accès public ouvert)</option>
+                <option value="true" <%= config.maintenanceMode ? 'selected' : '' %>>🔴 En Maintenance (Bloquer les visiteurs)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message d'explication pour les visiteurs :</label>
+              <textarea name="maintenanceMessage" class="form-textarea"><%= config.maintenanceMessage %></textarea>
+            </div>
+            <button type="submit" class="btn-admin <%= config.maintenanceMode ? '' : 'btn-danger' %>">
+              <%= config.maintenanceMode ? '🟢 Désactiver la Maintenance (Mettre en Ligne)' : '🔴 Activer le Mode Maintenance' %>
+            </button>
+          </form>
+        </div>
+
+        <!-- Card 2: Featured Hero Movie Configuration -->
+        <div class="admin-card">
+          <div class="card-head">
+            <span>🎬 Film Vedette à l'Affiche</span>
+          </div>
+          <form action="/admin/update-config" method="POST">
+            <div class="form-group">
+              <label class="form-label">ID TMDB du Film / Série en Couverture :</label>
+              <input type="text" id="heroInput" name="featuredHeroId" value="<%= config.featuredHeroId %>" class="form-input" placeholder="ex: 569094" required>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <div class="form-label" style="font-size: 0.78rem;">Raccourcis Préréglés :</div>
+              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+                <button type="button" class="preset-btn" onclick="setHero('569094')">🕷️ Spider-Man</button>
+                <button type="button" class="preset-btn" onclick="setHero('37854')">☠️ One Piece</button>
+                <button type="button" class="preset-btn" onclick="setHero('299536')">🛡️ Avengers</button>
+                <button type="button" class="preset-btn" onclick="setHero('46260')">🍥 Naruto</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Texte du Bandeau d'Annonce Général (Optionnel) :</label>
+              <input type="text" name="announcementText" value="<%= config.announcementText %>" class="form-input" placeholder="ex: 📢 Nouveaux épisodes ajoutés en HD !">
+            </div>
+
+            <button type="submit" class="btn-admin">Enregistrer la Configuration</button>
+          </form>
+        </div>
+
+        <!-- Card 3: Security & Server Telemetry -->
+        <div class="admin-card">
+          <div class="card-head">
+            <span>📊 Métriques & Sécurité Admin</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px;">
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 12px; border-radius: 8px; text-align: center;">
+              <div style="font-size: 1.3rem; font-weight: 900; color: #22c55e;"><%= activeVisitors %></div>
+              <div style="font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 2px;">En Ligne Direct</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 12px; border-radius: 8px; text-align: center;">
+              <div style="font-size: 1.3rem; font-weight: 900; color: #5865F2;">7H</div>
+              <div style="font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 2px;">Jeton Sécurité</div>
+            </div>
+          </div>
+
+          <form action="/admin/update-config" method="POST">
+            <div class="form-group">
+              <label class="form-label">Changer le Code PIN Administrateur :</label>
+              <input type="text" name="newPin" placeholder="Nouveau code PIN (ex: 5678)" class="form-input" minlength="4">
+            </div>
+            <button type="submit" class="btn-admin" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">Changer le PIN Admin</button>
+          </form>
+        </div>
+
+      </div>
+
+      <script>
+        function setHero(id) {
+          document.getElementById('heroInput').value = id;
+        }
+      </script>
+
+    <% } %>
+  </div>
+
+</body>
+</html>

@@ -84,12 +84,38 @@ app.get('/api/online-count/stream', (req, res) => {
   });
 });
 
+const appConfig = {
+  maintenanceMode: false,
+  maintenanceMessage: "JapoPlay est actuellement en maintenance programmée pour l'ajout de nouveaux contenus HD et l'amélioration des serveurs. Nous revenons très vite !",
+  featuredHeroId: "569094",
+  announcementText: "",
+  adminPin: "1234"
+};
+
+function maintenanceMiddleware(req, res, next) {
+  const p = req.path;
+  if (p.startsWith('/admin') || p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p === '/favicon.ico' || p.startsWith('/api/online-count') || p === '/bot-check') {
+    return next();
+  }
+
+  const isAdmin = (req.session && req.session.isAdmin) || (req.cookies && req.cookies.japoplay_admin_auth === 'true');
+  if (appConfig.maintenanceMode && !isAdmin) {
+    return res.status(530).render('maintenance', {
+      message: appConfig.maintenanceMessage
+    });
+  }
+
+  next();
+}
+
+app.use(maintenanceMiddleware);
+
 const SEVEN_HOURS_MS = 7 * 3600 * 1000;
 const rateLimitMap = new Map();
 
 function botProtectionMiddleware(req, res, next) {
   const p = req.path;
-  if (p === '/bot-check' || p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p.startsWith('/api/online-count') || p === '/favicon.ico') {
+  if (p.startsWith('/admin') || p === '/bot-check' || p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p.startsWith('/api/online-count') || p === '/favicon.ico') {
     return next();
   }
 
@@ -427,26 +453,83 @@ app.get('/history', (req, res) => {
   res.render('history');
 });
 
+app.get('/admin', (req, res) => {
+  const isAdmin = (req.session && req.session.isAdmin) || (req.cookies && req.cookies.japoplay_admin_auth === 'true');
+  res.render('admin', {
+    isAdmin,
+    config: appConfig,
+    activeVisitors: getActiveVisitorsCount(),
+    error: req.query.error || null,
+    success: req.query.success || null
+  });
+});
+
+app.post('/admin/login', (req, res) => {
+  const { pin } = req.body;
+  if (pin === appConfig.adminPin) {
+    req.session.isAdmin = true;
+    res.cookie('japoplay_admin_auth', 'true', { maxAge: 7 * 86400 * 1000, httpOnly: false });
+    return res.redirect('/admin?success=Connexion+reussie');
+  }
+  return res.redirect('/admin?error=Code+PIN+incorrect');
+});
+
+app.post('/admin/logout', (req, res) => {
+  if (req.session) req.session.isAdmin = false;
+  res.clearCookie('japoplay_admin_auth');
+  res.redirect('/home');
+});
+
+app.post('/admin/toggle-maintenance', (req, res) => {
+  const isAdmin = (req.session && req.session.isAdmin) || (req.cookies && req.cookies.japoplay_admin_auth === 'true');
+  if (!isAdmin) return res.status(403).send('Accès refusé');
+
+  appConfig.maintenanceMode = (req.body.maintenanceMode === 'true' || req.body.maintenanceMode === 'on');
+  if (req.body.maintenanceMessage) {
+    appConfig.maintenanceMessage = req.body.maintenanceMessage.trim();
+  }
+  res.redirect('/admin?success=Mode+maintenance+mis+a+jour');
+});
+
+app.post('/admin/update-config', (req, res) => {
+  const isAdmin = (req.session && req.session.isAdmin) || (req.cookies && req.cookies.japoplay_admin_auth === 'true');
+  if (!isAdmin) return res.status(403).send('Accès refusé');
+
+  if (req.body.featuredHeroId) {
+    appConfig.featuredHeroId = req.body.featuredHeroId.trim();
+  }
+  if (req.body.announcementText !== undefined) {
+    appConfig.announcementText = req.body.announcementText.trim();
+  }
+  if (req.body.newPin && req.body.newPin.trim().length >= 4) {
+    appConfig.adminPin = req.body.newPin.trim();
+  }
+
+  res.redirect('/admin?success=Configuration+mise+a+jour');
+});
+
 app.get('/home', async (req, res) => {
-  const [trendingMovies, popularSeries, topRated, upcoming, spiderman] = await Promise.all([
+  const heroId = appConfig.featuredHeroId || '569094';
+  const [trendingMovies, popularSeries, topRated, upcoming, featuredMovie] = await Promise.all([
     tmdbFetch('/trending/movie/week'),
     tmdbFetch('/discover/tv', { without_genres: '16', sort_by: 'popularity.desc' }),
     tmdbFetch('/movie/top_rated'),
     tmdbFetch('/movie/upcoming'),
-    tmdbFetch('/movie/569094')
+    tmdbFetch('/movie/' + heroId)
   ]);
 
-  const heroItem = (spiderman && spiderman.title)
-    ? spiderman
+  const heroItem = (featuredMovie && (featuredMovie.title || featuredMovie.name))
+    ? featuredMovie
     : (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
 
   let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)) : [];
-  if (spiderman && spiderman.id && !movieResults.some(m => m.id === spiderman.id)) {
-    movieResults.unshift(spiderman);
+  if (featuredMovie && featuredMovie.id && !movieResults.some(m => m.id === featuredMovie.id)) {
+    movieResults.unshift(featuredMovie);
   }
 
   res.render('index', {
     hero: heroItem,
+    announcement: appConfig.announcementText,
     trendingMovies: movieResults.slice(0, 14),
     popularSeries: popularSeries ? popularSeries.results.filter(s => !isAdultContent(s)).slice(0, 14) : [],
     topRated: topRated ? topRated.results.filter(m => !isAdultContent(m)).slice(0, 14) : [],
