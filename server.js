@@ -428,18 +428,26 @@ app.get('/history', (req, res) => {
 });
 
 app.get('/home', async (req, res) => {
-  const [trendingMovies, popularSeries, topRated, upcoming] = await Promise.all([
+  const [trendingMovies, popularSeries, topRated, upcoming, spiderman] = await Promise.all([
     tmdbFetch('/trending/movie/week'),
     tmdbFetch('/discover/tv', { without_genres: '16', sort_by: 'popularity.desc' }),
     tmdbFetch('/movie/top_rated'),
-    tmdbFetch('/movie/upcoming')
+    tmdbFetch('/movie/upcoming'),
+    tmdbFetch('/movie/569094')
   ]);
 
-  const heroItem = trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null;
+  const heroItem = (spiderman && spiderman.title)
+    ? spiderman
+    : (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
+
+  let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)) : [];
+  if (spiderman && spiderman.id && !movieResults.some(m => m.id === spiderman.id)) {
+    movieResults.unshift(spiderman);
+  }
 
   res.render('index', {
     hero: heroItem,
-    trendingMovies: trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)).slice(0, 14) : [],
+    trendingMovies: movieResults.slice(0, 14),
     popularSeries: popularSeries ? popularSeries.results.filter(s => !isAdultContent(s)).slice(0, 14) : [],
     topRated: topRated ? topRated.results.filter(m => !isAdultContent(m)).slice(0, 14) : [],
     upcoming: upcoming ? upcoming.results.filter(m => !isAdultContent(m)).slice(0, 14) : []

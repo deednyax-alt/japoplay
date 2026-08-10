@@ -41,15 +41,21 @@
 
   <% if (hero) { %>
     <section class="hero-banner">
-      <img src="https://image.tmdb.org/t/p/original<%= hero.backdrop_path %>" alt="<%= hero.title %>" class="hero-backdrop">
+      <img src="https://image.tmdb.org/t/p/original<%= hero.backdrop_path %>" alt="<%= hero.title || hero.name %>" class="hero-backdrop">
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <div class="hero-badge">A L'AFFICHE AUJOURD'HUI</div>
-        <h1 class="hero-title"><%= hero.title %></h1>
+        <div class="hero-badge">🔥 À L'AFFICHE SUR JAPOPLAY</div>
+        <h1 class="hero-title"><%= hero.title || hero.name %></h1>
+        <div class="hero-meta">
+          <span><%= hero.release_date ? hero.release_date.substring(0,4) : '2023' %></span>
+          <span>•</span>
+          <span class="rating">★ <%= hero.vote_average ? hero.vote_average.toFixed(1) : '8.7' %> / 10</span>
+        </div>
         <p class="hero-overview"><%= hero.overview %></p>
         <div class="hero-actions">
           <a href="/watch?type=movie&id=<%= hero.id %>" class="btn-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            Visionner
+            Regarder Maintenant
           </a>
           <a href="/movie/<%= hero.id %>" class="btn-secondary">
             Plus d'infos
