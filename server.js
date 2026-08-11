@@ -525,6 +525,12 @@ app.get('/home', async (req, res) => {
     tmdbFetch('/movie/969681')
   ]);
 
+  if (defaultBrandNewDay) {
+    if (!defaultBrandNewDay.poster_path || defaultBrandNewDay.poster_path === '/jjCCZcCtggGjKik2gXjyux1VEdZ.jpg') {
+      defaultBrandNewDay.poster_path = '/3BVng0lmJyYIUqm5dxLS2eZ2625.jpg';
+    }
+  }
+
   const heroItem = (featuredMovie && featuredMovie.title)
     ? featuredMovie
     : (defaultBrandNewDay || (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null));
@@ -551,6 +557,12 @@ app.get('/movies', async (req, res) => {
     tmdbFetch('/discover/movie', { page, sort_by: 'popularity.desc', include_adult: false }),
     page === 1 ? tmdbFetch('/movie/969681') : null
   ]);
+
+  if (brandNewDay) {
+    if (!brandNewDay.poster_path || brandNewDay.poster_path === '/jjCCZcCtggGjKik2gXjyux1VEdZ.jpg') {
+      brandNewDay.poster_path = '/3BVng0lmJyYIUqm5dxLS2eZ2625.jpg';
+    }
+  }
 
   let movies = data && data.results ? data.results.filter(m => !isAdultContent(m)) : [];
   if (brandNewDay && brandNewDay.id && page === 1) {
@@ -734,14 +746,27 @@ app.get('/search', async (req, res) => {
   let iptv = [];
 
   if (query.trim()) {
+    const isSpiderman = query.toLowerCase().replace(/[^a-z0-9]/g, '').includes('spiderman');
+    const searchQuery = isSpiderman ? 'Spider-Man' : query;
+
     const [tmdbMovies, tmdbSeries, tmdbAnime, tvList] = await Promise.all([
-      tmdbFetch('/search/movie', { query, include_adult: false }),
-      tmdbFetch('/search/tv', { query, without_genres: '16', include_adult: false }),
-      tmdbFetch('/search/tv', { query, with_genres: '16', include_adult: false }),
+      tmdbFetch('/search/movie', { query: searchQuery, include_adult: false }),
+      tmdbFetch('/search/tv', { query: searchQuery, without_genres: '16', include_adult: false }),
+      tmdbFetch('/search/tv', { query: searchQuery, with_genres: '16', include_adult: false }),
       xonaflixTvScraper.getChannels()
     ]);
 
-    if (tmdbMovies) movies = tmdbMovies.results ? tmdbMovies.results.filter(m => !isAdultContent(m)) : [];
+    if (tmdbMovies && tmdbMovies.results) {
+      movies = tmdbMovies.results.filter(m => !isAdultContent(m)).map(item => {
+        if (item.id === 969681 || item.id === '969681' || (item.title && item.title.includes('Brand New Day'))) {
+          if (!item.poster_path || item.poster_path === '/jjCCZcCtggGjKik2gXjyux1VEdZ.jpg') {
+            item.poster_path = '/3BVng0lmJyYIUqm5dxLS2eZ2625.jpg';
+          }
+        }
+        return item;
+      });
+    }
+
     if (tmdbSeries) series = tmdbSeries.results ? tmdbSeries.results.filter(s => !isAdultContent(s)) : [];
     if (tmdbAnime) animes = tmdbAnime.results ? tmdbAnime.results.filter(a => !isAdultContent(a)) : [];
     if (tvList) {
