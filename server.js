@@ -515,22 +515,24 @@ app.post('/admin/update-config', (req, res) => {
 });
 
 app.get('/home', async (req, res) => {
-  const heroId = appConfig.featuredHeroId || '969681';
-  const [trendingMovies, popularSeries, topRated, upcoming, brandNewDay] = await Promise.all([
+  const targetHeroId = req.query.hero || appConfig.featuredHeroId || '969681';
+  const [trendingMovies, popularSeries, topRated, upcoming, featuredMovie, defaultBrandNewDay] = await Promise.all([
     tmdbFetch('/trending/movie/week'),
     tmdbFetch('/discover/tv', { without_genres: '16', sort_by: 'popularity.desc' }),
     tmdbFetch('/movie/top_rated'),
     tmdbFetch('/movie/upcoming'),
-    tmdbFetch('/movie/' + heroId)
+    tmdbFetch('/movie/' + targetHeroId),
+    tmdbFetch('/movie/969681')
   ]);
 
-  const heroItem = (brandNewDay && brandNewDay.title)
-    ? brandNewDay
-    : (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
+  const heroItem = (featuredMovie && featuredMovie.title)
+    ? featuredMovie
+    : (defaultBrandNewDay || (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null));
 
   let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)) : [];
-  if (brandNewDay && brandNewDay.id && !movieResults.some(m => m.id === brandNewDay.id)) {
-    movieResults.unshift(brandNewDay);
+  if (defaultBrandNewDay && defaultBrandNewDay.id) {
+    movieResults = movieResults.filter(m => m.id !== defaultBrandNewDay.id);
+    movieResults.unshift(defaultBrandNewDay);
   }
 
   res.render('index', {
@@ -545,8 +547,16 @@ app.get('/home', async (req, res) => {
 
 app.get('/movies', async (req, res) => {
   const page = parseInt(req.query.page) || 1;
-  const data = await tmdbFetch('/discover/movie', { page, sort_by: 'popularity.desc', include_adult: false });
-  const movies = data && data.results ? data.results.filter(m => !isAdultContent(m)) : [];
+  const [data, brandNewDay] = await Promise.all([
+    tmdbFetch('/discover/movie', { page, sort_by: 'popularity.desc', include_adult: false }),
+    page === 1 ? tmdbFetch('/movie/969681') : null
+  ]);
+
+  let movies = data && data.results ? data.results.filter(m => !isAdultContent(m)) : [];
+  if (brandNewDay && brandNewDay.id && page === 1) {
+    movies = movies.filter(m => m.id !== brandNewDay.id);
+    movies.unshift(brandNewDay);
+  }
   const totalPages = data && data.total_pages ? Math.min(data.total_pages, 500) : 1;
 
   res.render('movies', { movies, page, totalPages });
