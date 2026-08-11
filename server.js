@@ -86,7 +86,7 @@ app.get('/api/online-count/stream', (req, res) => {
 const appConfig = {
   maintenanceMode: false,
   maintenanceMessage: "JapoPlay est actuellement en maintenance programmée pour l'ajout de nouveaux contenus HD et l'amélioration des serveurs. Nous revenons très vite !",
-  featuredHeroId: "569094",
+  featuredHeroId: "969681",
   announcementText: "",
   adminPin: "1234"
 };
@@ -515,21 +515,22 @@ app.post('/admin/update-config', (req, res) => {
 });
 
 app.get('/home', async (req, res) => {
-  const [trendingMovies, popularSeries, topRated, upcoming, spiderman] = await Promise.all([
+  const heroId = appConfig.featuredHeroId || '969681';
+  const [trendingMovies, popularSeries, topRated, upcoming, brandNewDay] = await Promise.all([
     tmdbFetch('/trending/movie/week'),
     tmdbFetch('/discover/tv', { without_genres: '16', sort_by: 'popularity.desc' }),
     tmdbFetch('/movie/top_rated'),
     tmdbFetch('/movie/upcoming'),
-    tmdbFetch('/movie/569094')
+    tmdbFetch('/movie/' + heroId)
   ]);
 
-  const heroItem = (spiderman && spiderman.title)
-    ? spiderman
+  const heroItem = (brandNewDay && brandNewDay.title)
+    ? brandNewDay
     : (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
 
   let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)) : [];
-  if (spiderman && spiderman.id && !movieResults.some(m => m.id === spiderman.id)) {
-    movieResults.unshift(spiderman);
+  if (brandNewDay && brandNewDay.id && !movieResults.some(m => m.id === brandNewDay.id)) {
+    movieResults.unshift(brandNewDay);
   }
 
   res.render('index', {
