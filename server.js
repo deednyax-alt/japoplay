@@ -9,6 +9,7 @@ const cheerio = require('cheerio');
 const streamflixScraper = require('./streamflixScraper');
 const franimeScraper = require('./franimeScraper');
 const xonaflixTvScraper = require('./xonaflixTvScraper');
+const tinyzoneScraper = require('./tinyzoneScraper');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -650,12 +651,14 @@ app.get('/watch', async (req, res) => {
     if (movieData) {
       titleDisplay = movieData.title;
       if (movieData.poster_path) posterUrl = 'https://image.tmdb.org/t/p/w500' + movieData.poster_path;
-      const [streamFr, streamOrig] = await Promise.all([
+      const [streamFr, streamOrig, tzStream] = await Promise.all([
         streamflixScraper.scrapeMovie(id, movieData.title),
-        movieData.original_title ? streamflixScraper.scrapeMovie(id, movieData.original_title) : null
+        movieData.original_title ? streamflixScraper.scrapeMovie(id, movieData.original_title) : null,
+        tinyzoneScraper.scrapeSource(movieData.title, 'movie')
       ]);
       if (streamFr) sources.push(streamFr);
       if (streamOrig) sources.push(streamOrig);
+      if (tzStream) sources.push(tzStream);
     }
   } else if (type === 'series' || type === 'anime') {
     const sNum = season || 1;
@@ -664,11 +667,13 @@ app.get('/watch', async (req, res) => {
     if (seriesData) {
       titleDisplay = `${seriesData.name} - S${sNum} E${epNum}`;
       if (seriesData.poster_path) posterUrl = 'https://image.tmdb.org/t/p/w500' + seriesData.poster_path;
-      const [sfStream, frMatches] = await Promise.all([
+      const [sfStream, tzStream, frMatches] = await Promise.all([
         streamflixScraper.scrapeSeries(id, sNum, epNum, seriesData.name),
+        tinyzoneScraper.scrapeSource(seriesData.name, 'tv', sNum, epNum),
         franimeScraper.search(seriesData.name)
       ]);
       if (sfStream) sources.push(sfStream);
+      if (tzStream) sources.push(tzStream);
       if (frMatches && frMatches.length > 0) {
         const frDet = await franimeScraper.getAnimeDetails(frMatches[0].id);
         if (frDet && frDet.seasons) {
