@@ -97,7 +97,7 @@
               <div class="card-info">
                 <div class="card-title"><%= item.title %></div>
                 <div class="card-meta">
-                  <span><%= item.release_date ? item.release_date.substring(0,4) : 'FILM' %></span>
+                  <span>📅 <%= item.release_date ? item.release_date.substring(0,4) : '2024' %></span>
                   <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
                 </div>
               </div>
@@ -122,7 +122,7 @@
               <div class="card-info">
                 <div class="card-title"><%= item.name %></div>
                 <div class="card-meta">
-                  <span>SÉRIE</span>
+                  <span>📅 <%= item.first_air_date ? item.first_air_date.substring(0,4) : '2024' %></span>
                   <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.2' %></span>
                 </div>
               </div>
@@ -147,7 +147,7 @@
               <div class="card-info">
                 <div class="card-title"><%= item.title %></div>
                 <div class="card-meta">
-                  <span>TOP</span>
+                  <span>📅 <%= item.release_date ? item.release_date.substring(0,4) : '2024' %></span>
                   <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.5' %></span>
                 </div>
               </div>

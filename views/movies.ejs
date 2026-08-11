@@ -58,7 +58,7 @@
             <div class="card-info">
               <div class="card-title"><%= item.title %></div>
               <div class="card-meta">
-                <span><%= item.release_date ? item.release_date.substring(0,4) : 'FILM' %></span>
+                <span>📅 <%= item.release_date ? item.release_date.substring(0,4) : '2024' %></span>
                 <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
               </div>
             </div>

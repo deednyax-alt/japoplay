@@ -40,16 +40,16 @@
 
     <% if (movies.length > 0) { %>
       <h2 class="section-title" style="margin-bottom: 16px;">Films</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; margin-bottom: 40px;">
+      <div class="cards-grid" style="margin-bottom: 40px;">
         <% movies.forEach(item => { %>
           <% if (item.poster_path) { %>
-            <a href="/movie/<%= item.id %>" class="card-item" style="flex: auto;">
+            <a href="/movie/<%= item.id %>" class="card-item">
               <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" class="card-poster">
               <div class="card-info">
                 <div class="card-title"><%= item.title %></div>
                 <div class="card-meta">
-                  <span>FILM</span>
-                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '' %></span>
+                  <span>📅 <%= item.release_date ? item.release_date.substring(0,4) : 'FILM' %></span>
+                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
                 </div>
               </div>
             </a>
@@ -60,16 +60,16 @@
 
     <% if (series.length > 0) { %>
       <h2 class="section-title" style="margin-bottom: 16px;">Séries</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; margin-bottom: 40px;">
+      <div class="cards-grid" style="margin-bottom: 40px;">
         <% series.forEach(item => { %>
           <% if (item.poster_path) { %>
-            <a href="/series/<%= item.id %>" class="card-item" style="flex: auto;">
+            <a href="/series/<%= item.id %>" class="card-item">
               <img src="https://image.tmdb.org/t/p/w500<%= item.poster_path %>" class="card-poster">
               <div class="card-info">
                 <div class="card-title"><%= item.name %></div>
                 <div class="card-meta">
-                  <span>SÉRIE</span>
-                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '' %></span>
+                  <span>📅 <%= item.first_air_date ? item.first_air_date.substring(0,4) : 'SÉRIE' %></span>
+                  <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
                 </div>
               </div>
             </a>
@@ -79,15 +79,16 @@
     <% } %>
 
     <% if (animes.length > 0) { %>
-      <h2 class="section-title" style="margin-bottom: 16px;">Animes (Franime)</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; margin-bottom: 40px;">
+      <h2 class="section-title" style="margin-bottom: 16px;">Animes</h2>
+      <div class="cards-grid" style="margin-bottom: 40px;">
         <% animes.forEach(item => { %>
-          <a href="/anime/<%= item.id %>" class="card-item" style="flex: auto;">
-            <img src="<%= item.image || 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=300&q=80' %>" class="card-poster">
+          <a href="/series/<%= item.id %>" class="card-item">
+            <img src="<%= item.poster_path ? ('https://image.tmdb.org/t/p/w500' + item.poster_path) : (item.image || 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=300&q=80') %>" class="card-poster">
             <div class="card-info">
-              <div class="card-title"><%= item.name %></div>
+              <div class="card-title"><%= item.name || item.title %></div>
               <div class="card-meta">
-                <span>ANIME</span>
+                <span>📅 <%= (item.first_air_date || item.release_date || item.startDate) ? (item.first_air_date || item.release_date || item.startDate).substring(0,4) : 'ANIME' %></span>
+                <span class="card-rating">★ <%= item.vote_average ? item.vote_average.toFixed(1) : '8.0' %></span>
               </div>
             </div>
           </a>
