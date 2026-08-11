@@ -93,6 +93,17 @@ const appConfig = {
 
 function maintenanceMiddleware(req, res, next) {
   const p = req.path;
+
+  // URL query parameter shortcut: ?maintenance=on or ?maintenance=off
+  if (req.query && req.query.maintenance !== undefined) {
+    const val = String(req.query.maintenance).toLowerCase();
+    if (val === 'on' || val === 'true' || val === '1') {
+      appConfig.maintenanceMode = true;
+    } else if (val === 'off' || val === 'false' || val === '0') {
+      appConfig.maintenanceMode = false;
+    }
+  }
+
   if (p.startsWith('/admin') || p.startsWith('/css') || p.startsWith('/js') || p.startsWith('/images') || p === '/favicon.ico' || p.startsWith('/api/online-count') || p === '/bot-check') {
     return next();
   }
