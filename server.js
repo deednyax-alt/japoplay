@@ -86,7 +86,7 @@ app.get('/api/online-count/stream', (req, res) => {
 const appConfig = {
   maintenanceMode: false,
   maintenanceMessage: "JapoPlay est actuellement en maintenance programmée pour l'ajout de nouveaux contenus HD et l'amélioration des serveurs. Nous revenons très vite !",
-  featuredHeroId: "569094",
+  featuredHeroId: "969681",
   announcementText: "",
   adminPin: "1234"
 };
@@ -524,13 +524,15 @@ app.get('/home', async (req, res) => {
     tmdbFetch('/movie/' + heroId)
   ]);
 
-  const heroItem = (featuredMovie && (featuredMovie.title || featuredMovie.name))
-    ? featuredMovie
-    : (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
+  let heroItem = (featuredMovie && (featuredMovie.title || featuredMovie.name)) ? featuredMovie : null;
+  if (!heroItem || (!heroItem.backdrop_path && !heroItem.poster_path)) {
+    const spidermanFallback = await tmdbFetch('/movie/569094');
+    heroItem = spidermanFallback || (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
+  }
 
   let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)) : [];
-  if (featuredMovie && featuredMovie.id && !movieResults.some(m => m.id === featuredMovie.id)) {
-    movieResults.unshift(featuredMovie);
+  if (heroItem && heroItem.id && !movieResults.some(m => m.id === heroItem.id)) {
+    movieResults.unshift(heroItem);
   }
 
   res.render('index', {
