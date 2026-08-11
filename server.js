@@ -515,24 +515,21 @@ app.post('/admin/update-config', (req, res) => {
 });
 
 app.get('/home', async (req, res) => {
-  const heroId = appConfig.featuredHeroId || '569094';
-  const [trendingMovies, popularSeries, topRated, upcoming, featuredMovie] = await Promise.all([
+  const [trendingMovies, popularSeries, topRated, upcoming, spiderman] = await Promise.all([
     tmdbFetch('/trending/movie/week'),
     tmdbFetch('/discover/tv', { without_genres: '16', sort_by: 'popularity.desc' }),
     tmdbFetch('/movie/top_rated'),
     tmdbFetch('/movie/upcoming'),
-    tmdbFetch('/movie/' + heroId)
+    tmdbFetch('/movie/569094')
   ]);
 
-  let heroItem = (featuredMovie && (featuredMovie.title || featuredMovie.name) && (featuredMovie.backdrop_path || featuredMovie.poster_path)) ? featuredMovie : null;
-  if (!heroItem) {
-    const spidermanFallback = await tmdbFetch('/movie/569094');
-    heroItem = spidermanFallback || (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
-  }
+  const heroItem = (spiderman && spiderman.title)
+    ? spiderman
+    : (trendingMovies && trendingMovies.results ? trendingMovies.results[0] : null);
 
-  let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m) && m.poster_path) : [];
-  if (heroItem && heroItem.id && !movieResults.some(m => m.id === heroItem.id) && heroItem.poster_path) {
-    movieResults.unshift(heroItem);
+  let movieResults = trendingMovies ? trendingMovies.results.filter(m => !isAdultContent(m)) : [];
+  if (spiderman && spiderman.id && !movieResults.some(m => m.id === spiderman.id)) {
+    movieResults.unshift(spiderman);
   }
 
   res.render('index', {
