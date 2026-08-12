@@ -691,8 +691,8 @@ app.get('/watch', async (req, res) => {
       if (streamOrig) sources.push(streamOrig);
     }
   } else if (type === 'series' || type === 'anime') {
-    const sNum = season || 1;
-    const epNum = episode || 1;
+    const sNum = parseInt(season) || 1;
+    const epNum = parseInt(episode) || 1;
     const seriesData = await tmdbFetch(`/tv/${id}`);
     if (seriesData) {
       titleDisplay = `${seriesData.name} - S${sNum} E${epNum}`;
@@ -702,6 +702,39 @@ app.get('/watch', async (req, res) => {
         franimeScraper.search(seriesData.name)
       ]);
       if (sfStream) sources.push(sfStream);
+
+      if (sources.length === 0) {
+        try {
+          const sPad = String(sNum).padStart(2, '0');
+          const ePad = String(epNum).padStart(2, '0');
+          const rawTitle = seriesData.name || 'Flash';
+          const folderName = rawTitle.replace(/[^a-zA-Z0-9\s]/g, '').trim();
+          const slugName = folderName.toLowerCase();
+
+          const candidates = [
+            `https://french.deliciouss.lol/series/VF/${folderName}/S${sPad}/${slugName}-S${sPad}-E${ePad}.mp4`,
+            `https://french.deliciouss.lol/series/VF/${folderName}/S${sPad}/${folderName}-S${sPad}-E${ePad}.mp4`,
+            `https://french.deliciouss.lol/series/VF/${folderName}/S${sPad}/S${sPad}E${ePad}.mp4`
+          ];
+
+          for (const cUrl of candidates) {
+            try {
+              const checkRes = await axios.head(cUrl, {
+                headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+                timeout: 3000
+              });
+              if (checkRes.status === 200) {
+                sources.push({
+                  name: 'Lecteur Direct (CDN Backup)',
+                  url: cUrl,
+                  type: 'video'
+                });
+                break;
+              }
+            } catch (e) {}
+          }
+        } catch (e) {}
+      }
       if (frMatches && frMatches.length > 0) {
         const frDet = await franimeScraper.getAnimeDetails(frMatches[0].id);
         if (frDet && frDet.seasons) {
