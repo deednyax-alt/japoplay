@@ -628,8 +628,23 @@ app.get('/series/:id', async (req, res) => {
 });
 
 app.get('/api/series/:id/season/:seasonNum', async (req, res) => {
-  const seasonData = await tmdbFetch(`/tv/${req.params.id}/season/${req.params.seasonNum}`);
-  res.json(seasonData || { episodes: [] });
+  const sNum = parseInt(req.params.seasonNum) || 1;
+  const seriesId = req.params.id;
+  const seasonData = await tmdbFetch(`/tv/${seriesId}/season/${sNum}`);
+  let episodes = seasonData && seasonData.episodes ? [...seasonData.episodes] : [];
+
+  // Guarantee Episode 24 is listed for Flash Season 1
+  if ((seriesId === '60735' || seriesId === 60735) && sNum === 1) {
+    if (!episodes.some(e => e.episode_number === 24)) {
+      episodes.push({
+        episode_number: 24,
+        name: "Épisode 24 (Spécial / VF)",
+        overview: "Épisode 24 de Flash."
+      });
+    }
+  }
+
+  res.json({ episodes });
 });
 
 app.get('/anime', async (req, res) => {
