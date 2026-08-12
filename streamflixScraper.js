@@ -358,7 +358,7 @@ async function scrapeSeries(tmdbId, season, episode, title = null, isBackground 
       return vSeason === sNum && vEpisode === epNum && isActive;
     });
     if (!epVideo) {
-      return null;
+      return await fallbackDirectSeriesStream(serie, sNum, epNum, title);
     }
     const epKey = `${serie.id}_${sNum}_${epNum}`;
     const cachedEpUrlObj = episodeVideoUrlCache.get(epKey);
@@ -401,10 +401,47 @@ async function scrapeSeries(tmdbId, season, episode, title = null, isBackground 
         };
       }
     } catch (urlErr) {}
-    return null;
+    return await fallbackDirectSeriesStream(serie, sNum, epNum, title);
   } catch (err) {
     return null;
   }
+}
+
+async function fallbackDirectSeriesStream(serie, sNum, epNum, title) {
+  try {
+    const sPad = String(sNum).padStart(2, '0');
+    const ePad = String(epNum).padStart(2, '0');
+    const rawTitle = (serie && (serie.title || serie.name)) ? (serie.title || serie.name) : (title || 'Flash');
+    const folderName = rawTitle.replace(/[^a-zA-Z0-9\s]/g, '').trim();
+    const slugName = folderName.toLowerCase();
+
+    const candidateUrls = [
+      `https://french.deliciouss.lol/series/VF/${folderName}/S${sPad}/${slugName}-S${sPad}-E${ePad}.mp4`,
+      `https://french.deliciouss.lol/series/VF/${folderName}/S${sPad}/${folderName}-S${sPad}-E${ePad}.mp4`,
+      `https://french.deliciouss.lol/series/VF/${folderName}/S${sPad}/S${sPad}E${ePad}.mp4`
+    ];
+
+    const cleanHeaders = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    };
+
+    for (const cUrl of candidateUrls) {
+      try {
+        const checkRes = await axios.head(cUrl, { headers: cleanHeaders, timeout: 3500 });
+        if (checkRes.status === 200) {
+          return {
+            url: cUrl,
+            quality: 'HD',
+            name: 'Lecteur Direct 🎬',
+            type: 'direct',
+            version: 'VF',
+            subtitle: null
+          };
+        }
+      } catch (e) {}
+    }
+  } catch (e) {}
+  return null;
 }
 
 setTimeout(() => {
